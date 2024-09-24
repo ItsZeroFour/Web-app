@@ -1,0 +1,56 @@
+@import "./reset";
+@import "./vars";
+@import "./fonts";
+
+/* BASIC SETTINGS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  overflow: hidden;
+
+  font-size: 14px;
+  font-family: "Nonito", sans-serif;
+  font-weight: 400;
+
+  background: var(--color-yellow);
+  color: var(--color-light-black);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-block-start: 75px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  color: inherit;
+  font-family: inherit;
+  line-height: 140%;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
