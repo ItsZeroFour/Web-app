@@ -1,12 +1,41 @@
-import React from "react";
+import React, { useEffect } from "react";
 import style from "./style.module.scss";
 import phoneDown from "../../assets/icons/phone_down.svg";
 import phoneUp from "../../assets/icons/phone_up.svg";
 import handImage from "../../assets/images/hand.png";
+import { Link, useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Main = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate("/sister-chat");
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, [navigate]);
+
+  const fadeVariants = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    exit: { opacity: 0 },
+  };
+
+  const fadeTransition = {
+    duration: 0.5,
+  };
+
   return (
-    <section className={style.main}>
+    <motion.section
+      className={style.main}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={fadeVariants}
+      transition={fadeTransition}
+    >
       <div className="container">
         <div className={`wrapper ${style.main__wrapper}`}>
           <div className={style.main__hand__image}>
@@ -25,17 +54,19 @@ const Main = () => {
                 <p>Reset</p>
               </div>
               <div className={style.main__button__up}>
-                <div className={style.main__button__up__icon}>
-                  <img src={phoneUp} alt="Up phone" />
-                </div>
+                <Link to="/sister-chat">
+                  <div className={style.main__button__up__icon}>
+                    <img src={phoneUp} alt="Up phone" />
+                  </div>
 
-                <p>Reply</p>
+                  <p>Reply</p>
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

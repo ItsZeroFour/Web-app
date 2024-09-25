@@ -25,7 +25,7 @@ body {
   width: 100vw;
   overflow: hidden;
 
-  font-family: "Nonito", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 400;
 
   background: var(--color-yellow);
@@ -36,7 +36,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-block-start: 75px;
   height: 100vh;
-  font-size: calc(6px + (20 - 6) * ((100vw - 600px) / (1920 - 600)));
+  // font-size: calc(6px + (20 - 6) * ((100vw - 600px) / (1920 - 600)));
 }
 
 .container {
@@ -48,7 +48,8 @@ html {
 
 .wrapper {
   width: 425px;
-  height: 667px;
+  // height: 667px;
+  height: calc(667px - env(safe-area-inset-bottom));
   margin: 0 auto;
   overflow: hidden;
 
