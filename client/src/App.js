@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import Main from "./screens/Main";
+import Main from "./screens/Main/Main";
 
 function App() {
   return (
