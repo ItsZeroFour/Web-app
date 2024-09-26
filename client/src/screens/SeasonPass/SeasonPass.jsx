@@ -62,7 +62,14 @@ const SeasonPass = () => {
           </div>
 
           {showNotification && (
-            <div className={style.season_pass__notification}>
+            <motion.div
+              className={style.season_pass__notification}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              variants={fadeVariants}
+              transition={fadeTransition}
+            >
               <motion.div
                 className={style.season_pass__bank}
                 initial="hidden"
@@ -92,7 +99,7 @@ const SeasonPass = () => {
                   <Link to="/">Call a friend for advice</Link>
                 </motion.div>
               )}
-            </div>
+            </motion.div>
           )}
         </div>
       </div>

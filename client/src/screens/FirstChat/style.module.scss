@@ -31,13 +31,13 @@
       text-align: center;
       background: var(--color-yellow);
 
-      @media (max-width: 425px) {
+      @media (max-width: 450px) {
         margin-bottom: 100px;
       }
     }
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: 450px) {
     border: none;
     border-radius: 0;
   }
@@ -139,7 +139,7 @@
     font-weight: 500;
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: 450px) {
     width: 80%;
   }
 

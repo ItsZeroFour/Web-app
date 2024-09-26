@@ -11,7 +11,7 @@
   flex-direction: column;
   align-items: center;
 
-  @media (max-width: 425px) {
+  @media (max-width: 450px) {
     border: none;
     border-radius: 0;
   }
@@ -116,7 +116,7 @@
           font-family: "Nunito-md", sans-serif;
           font-weight: 500;
 
-          @media (max-width: 425px) {
+          @media (max-width: 450px) {
             font-size: 12px;
           }
         }
@@ -129,7 +129,7 @@
 
     margin-top: 125px;
 
-    @media (max-width: 425px) {
+    @media (max-width: 450px) {
       margin-top: 150px;
       height: 450px;
     }
@@ -146,11 +146,11 @@
 
   .main__hand__image {
     position: absolute;
-    left: 10%;
+    left: 13%;
     top: 10%;
 
     img {
-      @media (max-width: 425px) {
+      @media (max-width: 450px) {
         width: 600px;
         height: auto;
       }
@@ -160,7 +160,7 @@
       }
     }
 
-    @media (max-width: 425px) {
+    @media (max-width: 450px) {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -179,5 +179,9 @@
     @media (max-height: 680px) {
       margin-top: -50px;
     }
+  }
+
+  @media (max-height: 675px) {
+    height: 100vh;
   }
 }
