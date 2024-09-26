@@ -121,7 +121,7 @@ const FirstChat = () => {
               transition={{ duration: 0.5 }}
             >
               <Link
-                to="/"
+                to="/season-pass"
                 className={`${style.fadeInLink} ${showLink && style.show}`}
               >
                 Go to the site
