@@ -58,12 +58,25 @@ const UploadScreen = () => {
         onChange={handleChangeFile}
         accept=".jpg, .png, .jpeg"
       />
-      <label htmlFor="create-post-img">Загрузить</label>
+      <label
+        style={{
+          padding: 10,
+          background: "#fff",
+          display: "block",
+          textAlign: "center",
+        }}
+        htmlFor="create-post-img"
+      >
+        Загрузить
+      </label>
 
       {image && (
         <div>
-          <img src={image} />
-          <button>Загрузить</button>
+          <img
+            style={{ width: "200px", height: "200px", objectFit: "contain" }}
+            src={image}
+          />
+          <button onClick={uploadImage}>Норм, загрузить фотку</button>
         </div>
       )}
     </div>
