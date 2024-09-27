@@ -4,6 +4,8 @@ import dotenv from "dotenv";
 import express from "express";
 import helmet from "helmet";
 import morgan from "morgan";
+import multer from "multer";
+import path from "path";
 
 dotenv.config({ path: "./.env" });
 const app = express();
@@ -24,9 +26,31 @@ app.use(
     parameterLimit: 1000000,
   })
 );
+app.use("/uploads", express.static("uploads"));
 
-/* ROUTES */
-app.use("/email", mailsRoutes);
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, "uploads/");
+  },
+  filename: (req, file, cb) => {
+    cb(null, Date.now() + path.extname(file.originalname)); // Append the current timestamp to the filename
+  },
+});
+
+const upload = multer({ storage });
+
+app.post("/upload", upload.single("image"), (req, res) => {
+  try {
+    if (!req.file) {
+      res.json({ message: "Ошибка при загрузке файла" });
+    } else {
+      res.status(200).json({ message: "Успешно" });
+    }
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ message: "Ошибка" });
+  }
+});
 
 /* START FUNCTION */
 async function start() {
