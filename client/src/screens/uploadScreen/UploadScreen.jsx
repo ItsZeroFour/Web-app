@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import Compressor from "compressorjs";
 
 const UploadScreen = () => {
   const [image, setImage] = useState("");
@@ -8,13 +9,25 @@ const UploadScreen = () => {
   const handleChangeFile = async (event) => {
     try {
       const file = event.target.files[0];
-      const reader = new FileReader();
 
-      reader.onloadend = () => {
-        setImage(reader.result);
-      };
+      new Compressor(file, {
+        quality: 0.6,
 
-      reader.readAsDataURL(file);
+        success(res) {
+          console.log(res);
+
+          const reader = new FileReader();
+
+          reader.onloadend = () => {
+            setImage(res.result);
+          };
+
+          reader.readAsDataURL(file);
+        },
+        error(err) {
+          console.log(err.message);
+        },
+      });
     } catch (err) {
       console.log(err);
     }
@@ -76,7 +89,9 @@ const UploadScreen = () => {
             style={{ width: "200px", height: "200px", objectFit: "contain" }}
             src={image}
           />
-          <button onClick={uploadImage}>Норм, загрузить фотку</button>
+          <button onClick={uploadImage} disabled={isSaved}>
+            Норм, загрузить фотку
+          </button>
         </div>
       )}
     </div>
