@@ -1,33 +1,36 @@
 import axios from "axios";
 import React, { useState } from "react";
-import Compressor from "compressorjs";
+import imageCompression from "browser-image-compression";
 
 const UploadScreen = () => {
   const [image, setImage] = useState("");
   const [isSaved, setIsSaved] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChangeFile = async (event) => {
     try {
       const file = event.target.files[0];
 
-      new Compressor(file, {
-        quality: 0.6,
+      const options = {
+        maxSizeMB: 1, // Максимальный размер изображения после сжатия в MB
+        maxWidthOrHeight: 800, // Максимальная ширина или высота изображения
+        useWebWorker: true, // Использовать Web Worker для улучшения производительности
+      };
 
-        success(res) {
-          console.log(res);
+      const maxSizeInBytes = 5 * 1024 * 1024;
 
-          const reader = new FileReader();
+      if (file.size > maxSizeInBytes) {
+        setError("Размер файла превышает 5 MB");
+        return;
+      }
 
-          reader.onloadend = () => {
-            setImage(res.result);
-          };
+      const compressedFile = await imageCompression(file, options);
 
-          reader.readAsDataURL(file);
-        },
-        error(err) {
-          console.log(err.message);
-        },
-      });
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImage(reader.result);
+      };
+      reader.readAsDataURL(compressedFile);
     } catch (err) {
       console.log(err);
     }
@@ -94,6 +97,8 @@ const UploadScreen = () => {
           </button>
         </div>
       )}
+
+      {error && <p>{error}</p>}
     </div>
   );
 };
