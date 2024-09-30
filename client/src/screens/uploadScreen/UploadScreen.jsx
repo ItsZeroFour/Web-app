@@ -14,8 +14,6 @@ const UploadScreen = () => {
         quality: 0.6,
 
         success(res) {
-          console.log(res);
-
           const reader = new FileReader();
 
           reader.onloadend = () => {
@@ -52,6 +50,13 @@ const UploadScreen = () => {
 
         if (res.data.message === "Успешно") {
           alert("Изображение успешно загружено!");
+
+          const uploadImage = await axios.post(
+            `${process.env.REACT_APP_SERVER_URL}/api/uploadImage`
+          );
+
+          console.log(uploadImage);
+
           setIsSaved(true);
         } else {
           throw new Error("Ошибка при загрузке изображения");
