@@ -6,6 +6,8 @@ const UploadScreen = () => {
   const [image, setImage] = useState("");
   const [isSaved, setIsSaved] = useState(false);
   const [error, setError] = useState("");
+  const [aiImageGeneratedName, setAiImageGeneratedName] = useState("");
+  const [queue, setQueue] = useState({});
 
   const handleChangeFile = async (event) => {
     try {
@@ -79,7 +81,11 @@ const UploadScreen = () => {
             { filename: res.data.url }
           );
 
-          console.log(uploadImageRes);
+          if (uploadImageRes && uploadImageRes.data["118"]) {
+            setAiImageGeneratedName(
+              uploadImageRes.data["118"][0].image.filename
+            );
+          }
 
           setIsSaved(true);
         } else {
@@ -122,6 +128,13 @@ const UploadScreen = () => {
             Норм, загрузить фотку
           </button>
         </div>
+      )}
+
+      {aiImageGeneratedName && (
+        <img
+          src={`${process.env.REACT_APP_SERVER_URL}/savedAi/${aiImageGeneratedName}`}
+          alt="ai image generated"
+        />
       )}
 
       {error && <p>{error}</p>}

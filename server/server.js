@@ -28,6 +28,7 @@ app.use(
   })
 );
 app.use("/uploads", express.static("uploads"));
+app.use("/savedAi", express.static("savedAi"));
 
 /* IMAGE UPLOAD */
 const storage = multer.diskStorage({
@@ -390,6 +391,7 @@ app.post("/api/uploadImage", async (req, res) => {
   try {
     const serverAddress = "62.68.147.244:35525";
 
+    /* Generate client id from filename (file name = client id) */
     const filePath = req.body.filename;
     const filename = filePath.split("/").pop();
     const clientId = filename.split(".").shift();
@@ -407,10 +409,6 @@ app.post("/api/uploadImage", async (req, res) => {
     await client.disconnect();
 
     res.status(200).json(images);
-
-    // res.status(200).json({
-    //   message: "Успешно!",
-    // });
   } catch (err) {
     console.log(err);
     res.status(500).json({
