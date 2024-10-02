@@ -1,31 +1,36 @@
 import axios from "axios";
 import React, { useState } from "react";
-import Compressor from "compressorjs";
+import imageCompression from "browser-image-compression";
 
 const UploadScreen = () => {
   const [image, setImage] = useState("");
   const [isSaved, setIsSaved] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChangeFile = async (event) => {
     try {
       const file = event.target.files[0];
 
-      new Compressor(file, {
-        quality: 0.6,
+      const options = {
+        maxSizeMB: 1, // Максимальный размер изображения после сжатия в MB
+        maxWidthOrHeight: 800, // Максимальная ширина или высота изображения
+        useWebWorker: true, // Использовать Web Worker для улучшения производительности
+      };
 
-        success(res) {
-          const reader = new FileReader();
+      const maxSizeInBytes = 5 * 1024 * 1024;
 
-          reader.onloadend = () => {
-            setImage(res.result);
-          };
+      if (file.size > maxSizeInBytes) {
+        setError("Размер файла превышает 5 MB");
+        return;
+      }
 
-          reader.readAsDataURL(file);
-        },
-        error(err) {
-          console.log(err.message);
-        },
-      });
+      const compressedFile = await imageCompression(file, options);
+
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImage(reader.result);
+      };
+      reader.readAsDataURL(compressedFile);
     } catch (err) {
       console.log(err);
     }
@@ -37,7 +42,9 @@ const UploadScreen = () => {
 
       const response = await fetch(image);
       const blob = await response.blob();
-      const file = new File([blob], "screenshot.jpeg", { type: "image/jpeg" });
+      const file = new File([blob], `${Date.now()}.jpeg`, {
+        type: "image/jpeg",
+      });
 
       const formData = new FormData();
       formData.append("image", file);
@@ -48,14 +55,31 @@ const UploadScreen = () => {
           formData
         );
 
-        if (res.data.message === "Успешно") {
+        const neyroFormData = new FormData();
+
+        neyroFormData.append("image", file);
+        neyroFormData.append("overwrite", "false");
+        neyroFormData.append("subfolder", "");
+        neyroFormData.append("type", "input");
+
+        await axios
+          .post("http://62.68.147.244:35525/upload/image", neyroFormData)
+          .then((response) => {
+            console.log("Response:", response.data);
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+
+        if (res.data.url) {
           alert("Изображение успешно загружено!");
 
-          const uploadImage = await axios.post(
-            `${process.env.REACT_APP_SERVER_URL}/api/uploadImage`
+          const uploadImageRes = await axios.post(
+            `${process.env.REACT_APP_SERVER_URL}/uploadImage`,
+            { filename: res.data.url }
           );
 
-          console.log(uploadImage);
+          console.log(uploadImageRes);
 
           setIsSaved(true);
         } else {
@@ -99,6 +123,8 @@ const UploadScreen = () => {
           </button>
         </div>
       )}
+
+      {error && <p>{error}</p>}
     </div>
   );
 };

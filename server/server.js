@@ -14,15 +14,15 @@ const app = express();
 /* CONSTANTS */
 const PORT = process.env.PORT || 5000;
 /* MIDDLEWARES */
-app.use(express.json({ limit: "7mb" }));
+app.use(express.json({ limit: "5mb" }));
 app.use(cors());
 app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use(morgan("common"));
-app.use(bodyParser.json({ limit: "7mb" }));
+app.use(bodyParser.json({ limit: "5mb" }));
 app.use(
   bodyParser.urlencoded({
-    limit: "7mb",
+    limit: "5mb",
     extended: true,
     parameterLimit: 1000000,
   })
@@ -35,11 +35,11 @@ const storage = multer.diskStorage({
     cb(null, "uploads/");
   },
   filename: (req, file, cb) => {
-    cb(null, Date.now() + path.extname(file.originalname)); // Append the current timestamp to the filename
+    cb(null, file.originalname); // Сохраняем оригинальное имя файла
   },
 });
 
-const upload = multer({ storage, limits: { fileSize: 7 * 1024 * 1024 } });
+const upload = multer({ storage, limits: { fileSize: 5 * 1024 * 1024 } });
 
 let prompt;
 
@@ -127,7 +127,7 @@ app.post("/api/upload", upload.single("image"), (req, res) => {
         },
         15: {
           inputs: {
-            image: `${process.env.SERVER_URL}/uploads${req.file.filename}`,
+            image: `${req.file.filename}`,
             upload: "image",
           },
           class_type: "LoadImage",
@@ -150,7 +150,7 @@ app.post("/api/upload", upload.single("image"), (req, res) => {
         },
         19: {
           inputs: {
-            image: `${process.env.SERVER_URL}/uploads/main.png`,
+            image: `main.png`,
             upload: "image",
           },
           class_type: "LoadImage",
@@ -256,7 +256,7 @@ app.post("/api/upload", upload.single("image"), (req, res) => {
         },
         71: {
           inputs: {
-            image: `${process.env.SERVER_URL}/uploads/mask.png`,
+            image: `mask.png`,
             upload: "image",
           },
           class_type: "LoadImage",
@@ -377,7 +377,7 @@ app.post("/api/upload", upload.single("image"), (req, res) => {
         },
       };
 
-      res.status(200).json({ message: "Успешно" });
+      res.status(200).json({ url: req.file.filename, prompt });
     }
   } catch (err) {
     console.log(err);
@@ -386,14 +386,17 @@ app.post("/api/upload", upload.single("image"), (req, res) => {
 });
 
 /* NEYRO CONNECT */
-app.post("/api/uploadImage", async (req, body) => {
+app.post("/api/uploadImage", async (req, res) => {
   try {
     const serverAddress = "62.68.147.244:35525";
 
-    const parts = req.file.filename.split(".");
-    const clientId = parts.slice(0, -1).join(".");
+    const filePath = req.body.filename;
+    const filename = filePath.split("/").pop();
+    const clientId = filename.split(".").shift();
 
     const client = new ComfyUIClient(serverAddress, clientId);
+
+    await client.connect();
 
     const images = await client.getImages(prompt);
 
@@ -402,6 +405,12 @@ app.post("/api/uploadImage", async (req, body) => {
 
     // Disconnect
     await client.disconnect();
+
+    res.status(200).json(images);
+
+    // res.status(200).json({
+    //   message: "Успешно!",
+    // });
   } catch (err) {
     console.log(err);
     res.status(500).json({
