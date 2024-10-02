@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import imageCompression from "browser-image-compression";
 
 const UploadScreen = () => {
@@ -8,6 +8,9 @@ const UploadScreen = () => {
   const [error, setError] = useState("");
   const [aiImageGeneratedName, setAiImageGeneratedName] = useState("");
   const [queue, setQueue] = useState({});
+  const [imageIsProcessing, setImageIsProcessing] = useState(false);
+  const [clientId, setClientId] = useState("");
+  const [processingPosition, setProcessingPosition] = useState(-1);
 
   const handleChangeFile = async (event) => {
     try {
@@ -38,15 +41,29 @@ const UploadScreen = () => {
     }
   };
 
+  const fetchData = async () => {
+    try {
+      const response = await axios.get("http://62.68.147.244:35525/queue");
+      setQueue(response.data);
+    } catch (err) {
+      setError(err);
+    }
+  };
+
   const uploadImage = async () => {
     try {
       if (!image) return;
 
       const response = await fetch(image);
       const blob = await response.blob();
-      const file = new File([blob], `${Date.now()}.jpeg`, {
+
+      const imageName = Date.now();
+
+      const file = new File([blob], `${imageName}.jpeg`, {
         type: "image/jpeg",
       });
+
+      setClientId(imageName);
 
       const formData = new FormData();
       formData.append("image", file);
@@ -76,10 +93,14 @@ const UploadScreen = () => {
         if (res.data.url) {
           alert("Изображение успешно загружено!");
 
+          setImageIsProcessing(true);
+
           const uploadImageRes = await axios.post(
             `${process.env.REACT_APP_SERVER_URL}/uploadImage`,
             { filename: res.data.url }
           );
+
+          setImageIsProcessing(false);
 
           if (uploadImageRes && uploadImageRes.data["118"]) {
             setAiImageGeneratedName(
@@ -96,6 +117,35 @@ const UploadScreen = () => {
       }
     } catch (err) {}
   };
+
+  useEffect(() => {
+    if (imageIsProcessing) {
+      fetchData();
+
+      const interval = setInterval(() => {
+        fetchData();
+      }, 5000);
+
+      return () => clearInterval(interval);
+    }
+  }, [imageIsProcessing]);
+
+  useEffect(() => {
+    if (imageIsProcessing) {
+      const position =
+        imageIsProcessing &&
+        Array.isArray(queue.queue_pending) && // Проверяем, что queue_pending существует и это массив
+        queue.queue_pending.findIndex((queueItem) => {
+          // Проверяем каждый элемент массива queue_pending
+          const clientObject = queueItem.find(
+            (item) => typeof item === "object" && item.client_id === clientId
+          );
+          return clientObject !== undefined;
+        });
+
+      setProcessingPosition(position);
+    }
+  }, [queue, imageIsProcessing]);
 
   return (
     <div>
@@ -130,9 +180,23 @@ const UploadScreen = () => {
         </div>
       )}
 
+      {imageIsProcessing && (
+        <p>
+          {processingPosition
+            ? processingPosition === -1
+              ? "Ваш запрос 1 в очереди"
+              : `Ваш запрос ${processingPosition} в очереди`
+            : "Загрузка..."}
+        </p>
+      )}
+
       {aiImageGeneratedName && (
         <img
-          src={`${process.env.REACT_APP_SERVER_URL}/savedAi/${aiImageGeneratedName}`}
+          style={{ width: 400, height: "auto" }}
+          src={`${process.env.REACT_APP_SERVER_URL.replace(
+            "/api",
+            ""
+          )}/savedAi/${aiImageGeneratedName}`}
           alt="ai image generated"
         />
       )}
