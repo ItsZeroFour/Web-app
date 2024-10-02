@@ -43,7 +43,9 @@ const UploadScreen = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://62.68.147.244:35525/queue");
+      const response = await axios.get(
+        `${process.env.REACT_APP_SERVER_URL}/getQueue`
+      );
       setQueue(response.data);
     } catch (err) {
       setError(err);
@@ -81,14 +83,16 @@ const UploadScreen = () => {
         neyroFormData.append("subfolder", "");
         neyroFormData.append("type", "input");
 
-        await axios
-          .post("http://62.68.147.244:35525/upload/image", neyroFormData)
-          .then((response) => {
-            console.log("Response:", response.data);
-          })
-          .catch((error) => {
-            console.error("Error:", error);
-          });
+        const { data } = await axios.post(
+          `${process.env.REACT_APP_SERVER_URL}/aiUpload`,
+          neyroFormData
+        );
+
+        if (data.error) {
+          return console.log(
+            "Произошла ошибка загрузки изображения на удаленный сервер"
+          );
+        }
 
         if (res.data.url) {
           alert("Изображение успешно загружено!");
@@ -102,9 +106,9 @@ const UploadScreen = () => {
 
           setImageIsProcessing(false);
 
-          if (uploadImageRes && uploadImageRes.data["118"]) {
+          if (uploadImageRes.data.images) {
             setAiImageGeneratedName(
-              uploadImageRes.data["118"][0].image.filename
+              uploadImageRes.data.images[118][0].image.filename
             );
           }
 
@@ -146,6 +150,10 @@ const UploadScreen = () => {
       setProcessingPosition(position);
     }
   }, [queue, imageIsProcessing]);
+
+  useEffect(() => {
+    console.log(aiImageGeneratedName);
+  }, [aiImageGeneratedName]);
 
   return (
     <div>

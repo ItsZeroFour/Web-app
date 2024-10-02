@@ -5,8 +5,10 @@ import express from "express";
 import helmet from "helmet";
 import morgan from "morgan";
 import multer from "multer";
-import path from "path";
 import { ComfyUIClient } from "comfy-ui-client";
+import axios from "axios";
+import fs from "fs";
+import FormData from "form-data";
 
 dotenv.config({ path: "./.env" });
 const app = express();
@@ -386,6 +388,59 @@ app.post("/api/upload", upload.single("image"), (req, res) => {
   }
 });
 
+app.post("/api/aiUpload", upload.single("image"), async (req, res) => {
+  try {
+    if (!req.file) {
+      return res.status(400).json({ error: "Файл не загружен." });
+    }
+
+    const formData = new FormData();
+
+    formData.append(
+      "image",
+      fs.createReadStream(req.file.path),
+      req.file.originalname
+    );
+    formData.append("overwrite", req.body.overwrite);
+    formData.append("subfolder", req.body.subfolder);
+    formData.append("type", req.body.type);
+
+    await axios
+      .post(`${process.env.NEYRO_SERVER_URL}/upload/image`, formData)
+      .then((response) => {
+        return res.status(200).json(response.data);
+      })
+      .catch((err) => {
+        return res
+          .status(500)
+          .json({ error: true, errLogs: err, fd: formData });
+      });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({
+      message: "Не удалось загрузить изображение на удаленный сервер",
+    });
+  }
+});
+
+app.get("/api/getQueue", async (req, res) => {
+  try {
+    await axios
+      .get("http://62.68.147.244:35525/queue")
+      .then((response) => {
+        return res.status(200).json(response.data);
+      })
+      .catch((err) => {
+        return res.status(500).json({ error: true, errLogs: err });
+      });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({
+      error: true,
+    });
+  }
+});
+
 /* NEYRO CONNECT */
 app.post("/api/uploadImage", async (req, res) => {
   try {
@@ -408,7 +463,7 @@ app.post("/api/uploadImage", async (req, res) => {
     // Disconnect
     await client.disconnect();
 
-    res.status(200).json(images);
+    res.status(200).json({ images, filePath, prompt });
   } catch (err) {
     console.log(err);
     res.status(500).json({
