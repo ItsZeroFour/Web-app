@@ -6,18 +6,19 @@ import axios from "axios";
 const NeyroImageGenerate = () => {
   const [aiImageGeneratedName, setAiImageGeneratedName] = useState("");
   const location = useLocation();
-  const { file } = location.state || null;
+
+  const { file } = location.state || {};
   const navigate = useNavigate();
 
   useEffect(() => {
     if (!file) {
-      return navigate("/camera");
+      return navigate("/upload-image");
     }
   }, [file]);
 
   async function uploadImage() {
     try {
-      if (file.name) {
+      if (file && file.name) {
         const neyroFormData = new FormData();
 
         neyroFormData.append("image", file);
@@ -63,7 +64,7 @@ const NeyroImageGenerate = () => {
   }
 
   useEffect(() => {
-    if (file.name) {
+    if (file && file.name) {
       completeGenerateFunctions();
     }
   }, [file]);

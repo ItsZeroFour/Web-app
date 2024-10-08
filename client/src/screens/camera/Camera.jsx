@@ -2,15 +2,39 @@ import React, { useCallback, useEffect, useState } from "react";
 import style from "./style.module.scss";
 import axios from "axios";
 import Webcam from "react-webcam";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import imageCompression from "browser-image-compression";
 
 const Camera = () => {
   const [image, setImage] = useState("");
   const [completeImage, setCompleteImage] = useState("");
   const webcamRef = React.useRef(null);
-  const [clientId, setClientId] = useState("");
+
   const navigate = useNavigate();
+
+  // async function checkCamera() {
+  //   try {
+  //     console.log("start...");
+  //     if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
+  //       console.error("API not supported.");
+  //       return navigate("/upload");
+  //     }
+
+  //     const devices = await navigator.mediaDevices.enumerateDevices();
+  //     console.log("Устройства:", devices);
+
+  //     const videoInputDevices = devices.filter(
+  //       (device) => device.kind === "videoinput"
+  //     );
+
+  //     if (videoInputDevices.length <= 0) {
+  //       return navigate("/upload");
+  //     }
+  //   } catch (error) {
+  //     console.error(error);
+  //     return navigate("/upload");
+  //   }
+  // }
 
   const capture = useCallback(() => {
     const imageSrc = webcamRef.current.getScreenshot();
@@ -82,8 +106,6 @@ const Camera = () => {
     const file = new File([blob], `${imageName}.jpeg`, {
       type: "image/jpeg",
     });
-
-    setClientId(imageName);
 
     const formData = new FormData();
     formData.append("image", file);
