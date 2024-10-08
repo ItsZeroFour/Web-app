@@ -8,6 +8,7 @@ import GameStart from "./screens/game_start/GameStart";
 import UploadImage from "./screens/upload_image/UploadImage";
 import Camera from "./screens/camera/Camera";
 import NeyroImageGenerate from "./screens/neyro_image_generate/NeyroImageGenerate";
+import ImageGenerated from "./screens/image_generated/ImageGenerated";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
               path="/neyro-image-generate"
               element={<NeyroImageGenerate />}
             />
+            <Route path="/image-generated" element={<ImageGenerated />} />
             <Route path="/cam" element={<Cam />} />
             <Route path="/upload" element={<UploadScreen />} />
           </Routes>

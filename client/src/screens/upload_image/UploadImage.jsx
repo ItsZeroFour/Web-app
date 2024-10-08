@@ -11,7 +11,6 @@ const UploadImage = () => {
 
   async function checkCamera() {
     try {
-      console.log("start...");
       if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
         console.error("API not supported.");
         setIsCamera(false);
@@ -64,7 +63,10 @@ const UploadImage = () => {
             <button
               disabled={!check}
               onClick={() =>
-                check && (isCamera ? navigate("/camera") : navigate("/upload"))
+                check &&
+                (isCamera
+                  ? navigate("/upload-image/camera")
+                  : navigate("/upload"))
               }
             >
               <img src={cameraImg} alt="camera" />
