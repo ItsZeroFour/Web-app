@@ -8,11 +8,11 @@ const ImageGenerated = () => {
 
   const { aiImageName } = location.state || {};
 
-  // useEffect(() => {
-  //   if (!aiImageName) {
-  //     return navigate("/upload-image");
-  //   }
-  // }, [aiImageName]);
+  useEffect(() => {
+    if (!aiImageName) {
+      return navigate("/upload-image");
+    }
+  }, [aiImageName]);
 
   return (
     <section className={style.image_generation}>
