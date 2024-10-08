@@ -5,9 +5,11 @@ import phoneUp from "../../assets/icons/phone_up.svg";
 import handImage from "../../assets/images/hand.png";
 import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const Main = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -43,7 +45,7 @@ const Main = () => {
           </div>
 
           <div className={style.main__content}>
-            <h2>Sister</h2>
+            <h2>{t("sister")}</h2>
 
             <div className={style.main__content__navigation}>
               <div className={style.main__button__down}>
@@ -51,7 +53,7 @@ const Main = () => {
                   <img src={phoneDown} alt="Down phone" />
                 </div>
 
-                <p>Reset</p>
+                <p>{t("reset")}</p>
               </div>
               <div className={style.main__button__up}>
                 <Link to="/sister-chat">
@@ -59,7 +61,7 @@ const Main = () => {
                     <img src={phoneUp} alt="Up phone" />
                   </div>
 
-                  <p>Reply</p>
+                  <p>{t("reply")}</p>
                 </Link>
               </div>
             </div>

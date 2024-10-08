@@ -12,30 +12,6 @@ const Camera = () => {
 
   const navigate = useNavigate();
 
-  // async function checkCamera() {
-  //   try {
-  //     console.log("start...");
-  //     if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
-  //       console.error("API not supported.");
-  //       return navigate("/upload");
-  //     }
-
-  //     const devices = await navigator.mediaDevices.enumerateDevices();
-  //     console.log("Устройства:", devices);
-
-  //     const videoInputDevices = devices.filter(
-  //       (device) => device.kind === "videoinput"
-  //     );
-
-  //     if (videoInputDevices.length <= 0) {
-  //       return navigate("/upload");
-  //     }
-  //   } catch (error) {
-  //     console.error(error);
-  //     return navigate("/upload");
-  //   }
-  // }
-
   const capture = useCallback(() => {
     const imageSrc = webcamRef.current.getScreenshot();
 
@@ -94,7 +70,6 @@ const Camera = () => {
     }
   }, [image]);
 
-  console.log(completeImage);
 
   const uploadImage = async () => {
     if (!image) return;
@@ -128,8 +103,6 @@ const Camera = () => {
       alert("Ошибка при загрузке файла");
     }
   };
-
-  // console.log(image);
 
   return (
     <section className={style.camera}>

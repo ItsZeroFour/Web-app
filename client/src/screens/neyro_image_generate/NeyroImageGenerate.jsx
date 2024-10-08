@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import style from "./style.module.scss";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
+import Banner from "../../components/banner/Banner";
 
 const NeyroImageGenerate = () => {
   const [aiImageGeneratedName, setAiImageGeneratedName] = useState("");
@@ -69,22 +70,22 @@ const NeyroImageGenerate = () => {
     }
   }, [file]);
 
-  console.log(aiImageGeneratedName);
+  useEffect(() => {
+    if (aiImageGeneratedName) {
+      return navigate("/image-generated", {
+        state: { aiImageName: aiImageGeneratedName },
+      });
+    }
+  }, [aiImageGeneratedName]);
 
   return (
     <section className={style.neyro_image_generate}>
       <div className="container">
         <div className={`wrapper ${style.neyro_image_generate__wrapper}`}>
-          {/* {aiImageGeneratedName ? (
-            <div className={style.neyro_image_generate__processing}>
-              <p></p>
-            </div>
-          ) : (
-            <div></div>
-          )} */}
-
           <div className={style.neyro_image_generate__processing}>
-            <div className={style.neyro_image_generate__banner}></div>
+            <div className={style.neyro_image_generate__banner}>
+              <Banner />
+            </div>
             <p>Waiting.....</p>
           </div>
         </div>
