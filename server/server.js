@@ -130,7 +130,7 @@ app.post("/api/upload", upload.single("image"), (req, res) => {
         },
         15: {
           inputs: {
-            image: `${req.file.filename}`,
+            image: `facesImages/${req.file.filename}`,
             upload: "image",
           },
           class_type: "LoadImage",
@@ -153,7 +153,7 @@ app.post("/api/upload", upload.single("image"), (req, res) => {
         },
         19: {
           inputs: {
-            image: `main.png`,
+            image: "main_v1.png",
             upload: "image",
           },
           class_type: "LoadImage",
@@ -259,7 +259,7 @@ app.post("/api/upload", upload.single("image"), (req, res) => {
         },
         71: {
           inputs: {
-            image: `mask.png`,
+            image: "mask_v1.png",
             upload: "image",
           },
           class_type: "LoadImage",
@@ -380,7 +380,7 @@ app.post("/api/upload", upload.single("image"), (req, res) => {
         },
       };
 
-      res.status(200).json({ url: req.file.filename, prompt });
+      res.status(200).json({ url: req.file.filename });
     }
   } catch (err) {
     console.log(err);
@@ -411,9 +411,7 @@ app.post("/api/aiUpload", upload.single("image"), async (req, res) => {
         return res.status(200).json(response.data);
       })
       .catch((err) => {
-        return res
-          .status(500)
-          .json({ error: true, errLogs: err, fd: formData });
+        return res.status(500).json({ error: true });
       });
   } catch (err) {
     console.log(err);
@@ -447,7 +445,7 @@ app.post("/api/uploadImage", async (req, res) => {
     const serverAddress = "62.68.147.244:35525";
 
     /* Generate client id from filename (file name = client id) */
-    const filePath = req.body.filename;
+    const filePath = `${req.body.filename}`;
     const filename = filePath.split("/").pop();
     const clientId = filename.split(".").shift();
 

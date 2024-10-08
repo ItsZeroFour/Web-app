@@ -4,11 +4,14 @@ import { motion } from "framer-motion";
 import sisterImageAvatar from "../../assets/images/sister_avatar.png";
 import personalImageAvatar from "../../assets/images/personal_avatar.png";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const FirstChat = () => {
   const [showFirstMessage, setShowFirstMessage] = useState(false);
   const [showSecondMessage, setShowSecondMessage] = useState(false);
   const [showLink, setShowLink] = useState(false);
+
+  const { t } = useTranslation();
 
   useEffect(() => {
     const firstMessageTimer = setTimeout(() => {
@@ -71,7 +74,7 @@ const FirstChat = () => {
               <img src={sisterImageAvatar} alt="Sister" />
             </div>
 
-            <h3>Sister</h3>
+            <h3>{t("sister")}</h3>
           </div>
 
           <div className={style.first__chat__history}>
@@ -87,10 +90,7 @@ const FirstChat = () => {
                   <img src={sisterImageAvatar} alt="sister avatar" />
                 </div>
                 <div className={style.first__chat__message__content}>
-                  <p>
-                    Raj, hey! Do you remember you promised to buy us IPL season
-                    pass for my birthday? Well, the sale ends soon...
-                  </p>
+                  <p>{t("sisterMsg1")}</p>
                 </div>
               </motion.div>
             )}
@@ -104,7 +104,7 @@ const FirstChat = () => {
                 transition={transition}
               >
                 <div className={style.first__chat__message__content}>
-                  <p>Hello, darling! Yeah, sure, I'll get it right away..</p>
+                  <p>{t("sisterMsg2")}</p>
                 </div>
                 <div className={style.first__chat__message__avatar}>
                   <img src={personalImageAvatar} alt="personal avatar" />
