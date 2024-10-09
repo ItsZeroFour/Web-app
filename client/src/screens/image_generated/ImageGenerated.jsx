@@ -22,7 +22,7 @@ const ImageGenerated = () => {
             src={`${process.env.REACT_APP_SERVER_URL.replace(
               "/api",
               ""
-            )}/savedAi/${aiImageName}`}
+            )}/aiGet/${aiImageName}`}
             alt="ai image"
           />
 
