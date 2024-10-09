@@ -10,6 +10,7 @@ import ImageGenerated from "./screens/image_generated/ImageGenerated";
 import Final from "./screens/final/Final";
 import Starter from "./screens/starter/Starter";
 import "./utils/i18n";
+import CallFriend from "./screens/call_friend/CallFriend";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/main" element={<Main />} />
             <Route path="/sister-chat" element={<FirstChat />} />
             <Route path="/season-pass" element={<SeasonPass />} />
+            <Route path="/call-friend" element={<CallFriend />} />
             <Route path="/game-start" element={<GameStart />} />
             <Route path="/upload-image" element={<UploadImage />} />
             <Route path="/upload-image/camera" element={<Camera />} />

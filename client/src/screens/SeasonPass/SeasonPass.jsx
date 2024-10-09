@@ -3,7 +3,7 @@ import style from "./style.module.scss";
 import glowes from "../../assets/images/glowes.png";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import bank from "../../assets/icons/bank.svg";
+import bank from "../../assets/icons/bank.png";
 
 const SeasonPass = () => {
   const [showNotification, setShowNotification] = useState(false);
@@ -96,7 +96,7 @@ const SeasonPass = () => {
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <Link to="/">Call a friend for advice</Link>
+                  <Link to="/call-friend">Call a friend for advice</Link>
                 </motion.div>
               )}
             </motion.div>

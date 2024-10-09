@@ -5,6 +5,7 @@ import sisterImageAvatar from "../../assets/images/sister_avatar.png";
 import personalImageAvatar from "../../assets/images/personal_avatar.png";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import Banner from "../../components/banner/Banner";
 
 const FirstChat = () => {
   const [showFirstMessage, setShowFirstMessage] = useState(false);
@@ -69,6 +70,7 @@ const FirstChat = () => {
     >
       <div className="container">
         <div className={`wrapper ${style.first__chat__wrapper}`}>
+          <Banner />
           <div className={style.first__chat__user}>
             <div className={style.first__chat__avatar}>
               <img src={sisterImageAvatar} alt="Sister" />
