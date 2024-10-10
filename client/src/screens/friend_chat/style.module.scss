@@ -1,0 +1,45 @@
+.friend_chat__wrapper {
+  background: var(--color-white);
+  border: 1px solid rgba(51, 85, 51, 0.333);
+  border-radius: 10px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 450px) {
+    border: none;
+    border-radius: 0;
+  }
+}
+
+.friend_chat__friend {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-top: 20px;
+
+  div {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #e8e8e8;
+    overflow: hidden;
+
+    img {
+      width: 65px;
+      height: auto;
+      margin-top: 5px;
+      margin-left: -5px;
+    }
+  }
+
+  h2 {
+    font-size: 16px;
+    
+  }
+}

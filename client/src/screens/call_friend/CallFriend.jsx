@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import style from "./style.module.scss";
 import friendImg from "../../assets/images/dewlan.png";
 import reset from "../../assets/icons/phone_down.svg";
+import { useNavigate } from "react-router-dom";
 
 const CallFriend = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate("/friend-chat");
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, [navigate]);
+
   return (
     <section className={style.call_friend}>
       <div className="container">

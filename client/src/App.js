@@ -11,6 +11,7 @@ import Final from "./screens/final/Final";
 import Starter from "./screens/starter/Starter";
 import "./utils/i18n";
 import CallFriend from "./screens/call_friend/CallFriend";
+import FriendChat from "./screens/friend_chat/FriendChat";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/sister-chat" element={<FirstChat />} />
             <Route path="/season-pass" element={<SeasonPass />} />
             <Route path="/call-friend" element={<CallFriend />} />
+            <Route path="/friend-chat" element={<FriendChat />} />
             <Route path="/game-start" element={<GameStart />} />
             <Route path="/upload-image" element={<UploadImage />} />
             <Route path="/upload-image/camera" element={<Camera />} />
