@@ -118,7 +118,7 @@ app.post("/api/upload", upload.single("image"), (req, res) => {
             start_at: 0,
             end_at: 0.8,
             embeds_scaling: "V only",
-            model: ["27", 0],
+            model: ["122", 0],
             ipadapter: ["30", 0],
             image: ["15", 0],
             clip_vision: ["12", 0],
@@ -231,7 +231,7 @@ app.post("/api/upload", upload.single("image"), (req, res) => {
         },
         62: {
           inputs: {
-            seed: 687905585250581,
+            seed: 746971534258503,
             steps: 6,
             cfg: 2,
             sampler_name: "dpmpp_sde",
@@ -376,6 +376,16 @@ app.post("/api/upload", upload.single("image"), (req, res) => {
           class_type: "PreviewImage",
           _meta: {
             title: "Preview Image",
+          },
+        },
+        122: {
+          inputs: {
+            unet_name: "STAT_16_2080-b-1-h-1024-w-1024_00001_.engine",
+            model_type: "sd1.x",
+          },
+          class_type: "TensorRTLoader",
+          _meta: {
+            title: "TensorRT Loader",
           },
         },
       };
