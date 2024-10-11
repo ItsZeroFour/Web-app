@@ -93,7 +93,7 @@
     width: 30px;
     height: auto;
     object-fit: cover;
-    margin-top: 5px;
+    margin-top: 10px;
   }
 }
 
@@ -112,12 +112,18 @@
   margin-top: auto;
   margin-bottom: 20px;
 
-  button {
+  button,
+  a {
     width: 90%;
     padding: 10px;
     background: var(--color-yellow);
     border-radius: 40px;
     font-size: 20px;
+    text-align: center;
+  }
+
+  @media (max-width: 450px) {
+    margin-bottom: 90px;
   }
 }
 

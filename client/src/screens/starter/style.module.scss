@@ -9,8 +9,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  overflow-y: auto;
+  overflow: hidden !important;
 
   padding: 20px;
   gap: 10px;
@@ -81,5 +80,9 @@
     color: var(--color-white);
     border-radius: 40px;
     font-size: 20px;
+  }
+
+  @media (max-width: 450px) {
+    margin-bottom: 90px;
   }
 }

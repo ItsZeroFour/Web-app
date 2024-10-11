@@ -4,12 +4,14 @@ import Banner from "../../components/banner/Banner";
 import friend from "../../assets/images/friend.png";
 import personalImageAvatar from "../../assets/images/personal_avatar.png";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const FriendChat = () => {
   const [showLink, setShowLink] = useState(false);
   const [visibleMessages, setVisibleMessages] = useState([]);
   const [isLoanClicked, setIsLoanClicked] = useState(false);
   const [isAdviceClicked, setIsAdviceClicked] = useState(false);
+  const [showLinkButton, setShowLinkButton] = useState(false);
 
   const messages = [
     {
@@ -116,6 +118,14 @@ const FriendChat = () => {
     setIsLoanClicked(true); // Скрываем кнопку "Asking for a loan"
     setIsAdviceClicked(true); // Скрываем кнопку "Asking for an advice"
     showNextMessages([messages[6], messages[7]]); // Показываем 7 и 8 сообщения
+
+    const linkTimer = setTimeout(() => {
+      setShowLinkButton(true);
+    }, 4000); // Показываем кнопки после появления 4-го сообщения
+
+    return () => {
+      clearTimeout(linkTimer);
+    };
   };
 
   const firstMessageVariants = {
@@ -224,6 +234,17 @@ const FriendChat = () => {
                     Asking for an advice
                   </button>
                 )}
+              </motion.div>
+            )}
+
+            {showLinkButton && (
+              <motion.div
+                className={style.friend_chat__link}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Link to="/after-chat">See the platform</Link>
               </motion.div>
             )}
           </div>
