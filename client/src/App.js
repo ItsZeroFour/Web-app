@@ -13,6 +13,9 @@ import "./utils/i18n";
 import CallFriend from "./screens/call_friend/CallFriend";
 import FriendChat from "./screens/friend_chat/FriendChat";
 import AfterChat from "./screens/after_chat/AfterChat";
+import Education1 from "./screens/education/Education1";
+import Education2 from "./screens/education/Education2";
+import Education3 from "./screens/education/Education3";
 
 function App() {
   return (
@@ -27,6 +30,9 @@ function App() {
             <Route path="/call-friend" element={<CallFriend />} />
             <Route path="/friend-chat" element={<FriendChat />} />
             <Route path="/after-chat" element={<AfterChat />} />
+            <Route path="/education-1" element={<Education1 />} />
+            <Route path="/education-2" element={<Education2 />} />
+            <Route path="/education-3" element={<Education3 />} />
             <Route path="/game-start" element={<GameStart />} />
             <Route path="/upload-image" element={<UploadImage />} />
             <Route path="/upload-image/camera" element={<Camera />} />

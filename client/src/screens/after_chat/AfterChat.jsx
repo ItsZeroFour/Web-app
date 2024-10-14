@@ -196,7 +196,7 @@ const AfterChat = () => {
 
               <div className={style.after_chat__buttons}>
                 <Link to="/upload-image">Let's try right now!</Link>
-                <Link to="/upload-image">Let's start from education</Link>
+                <Link to="/education-1">Let's start from education</Link>
               </div>
             </div>
           )}
