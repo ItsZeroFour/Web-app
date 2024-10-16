@@ -2,6 +2,27 @@
   "sister": "Sister",
   "reset": "Reset",
   "reply": "Reply",
-  "sisterMsg1": "Raj, hey! 🙌 Do you remember you promised to buy us IPL season pass for my birthday? 💝 Well, the sale ends soon...",
-  "sisterMsg2": "Hello, darling! 👋 Yeah, sure, I'll get it right away."
+  "sisterMsg1": "Raj, hey! 🎉 Do you remember you promised to buy us IPL season pass for my birthday? 🎂 Well, the sale ends soon…",
+  "sisterMsg2": "Hello, darling! 👋 Yeah, sure, I’ll get it right away.",
+  "goToSiteButton": "Go to the site",
+
+  "seasonPassTitle": "IPL SEASON PASS, 3350₹",
+  "seasonPassText": "Until the end of sales: 4 days",
+  "seasonPassButton": "Buy pass",
+
+  "bankNot": "You don't have enough funds. Balance: 6547₹.",
+  "bankButton": "Call a friend for advice",
+
+  "friendName": "DEVLAN",
+  "friendMessage1": "Hey, Devlan! 🤙How are you doing?",
+  "friendMessage2": "Hi, Raj 🤝 All good, I have bought the IPL season pass yesterday 🏏 I remember you and your sister were going too.",
+  "friendMessage3": "Yeah, that's exactly my point 😭 here's the situation, two days until the end of the sale, and I'm tight on money right now....",
+  "friendMessage4": "I see, can I help you?",
+  "friendMessage5": "Yes, can you borrow 30,000₹?🙏🙏🙏 I will definitely return it!",
+  "friendMessage6": "No, I'm sorry 😬 I don't have that much free money right now.",
+  "friendMessage7": "Please give me an advice what I can do to earn some money 🙏🙏🙏",
+  "friendMessage8": "You know, my cousin was telling me about some trading platform last week. I haven't had a chance to try it myself yet, but here's a link, check it out 👉 binomo.com",
+  "friendButton1": "Asking for a loan",
+  "friendButton2": "Asking for an advice",
+  "friendButton3": "See the platform"
 }

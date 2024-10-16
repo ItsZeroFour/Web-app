@@ -5,6 +5,7 @@ import friend from "../../assets/images/friend.png";
 import personalImageAvatar from "../../assets/images/personal_avatar.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const FriendChat = () => {
   const [showLink, setShowLink] = useState(false);
@@ -12,58 +13,54 @@ const FriendChat = () => {
   const [isLoanClicked, setIsLoanClicked] = useState(false);
   const [isAdviceClicked, setIsAdviceClicked] = useState(false);
   const [showLinkButton, setShowLinkButton] = useState(false);
+  const { t } = useTranslation();
 
   const messages = [
     {
       id: 1,
-      content: "Hey, Devlan! 🤙How are you doing?",
+      content: t("friendMessage1"),
       avatar: personalImageAvatar,
       position: "left",
     },
     {
       id: 2,
-      content:
-        "Hi, Raj 🤝 All good, I have bought the IPL season pass yesterday 🏏 I remember you and your sister were going too.",
+      content: t("friendMessage2"),
       avatar: friend,
       position: "right",
     },
     {
       id: 3,
-      content:
-        "Yeah, that's exactly my point 😭 here's the situation, two days until the end of the sale, and I'm tight on money right now....",
+      content: t("friendMessage3"),
       avatar: personalImageAvatar,
       position: "left",
     },
     {
       id: 4,
-      content: "I see, can I help you?",
+      content: t("friendMessage4"),
       avatar: friend,
       position: "right",
     },
     {
       id: 5,
-      content:
-        "Yes, can you borrow 30,000₹?🙏🙏🙏 I will definitely return it!",
+      content: t("friendMessage5"),
       avatar: personalImageAvatar,
       position: "left",
     },
     {
       id: 6,
-      content: "No, I'm sorry 😬 I don't have that much free money right now.",
+      content: t("friendMessage6"),
       avatar: friend,
       position: "right",
     },
     {
       id: 7,
-      content:
-        "Please give me an advice what I can do to earn some money 🙏🙏🙏",
+      content: t("friendMessage7"),
       avatar: personalImageAvatar,
       position: "left",
     },
     {
       id: 8,
-      content:
-        "You know, my cousin was telling me about some trading platform last week. I haven't had a chance to try it myself yet, but here's a link, check it out 👉 binomo.com",
+      content: t("friendMessage8"),
       avatar: friend,
       position: "right",
     },
@@ -157,7 +154,7 @@ const FriendChat = () => {
                 <img src={friend} alt="friend" />
               </div>
 
-              <h2>Devlan</h2>
+              <h2>{t("friendName")}</h2>
             </div>
 
             <div className={style.friend_chat__history}>
@@ -222,7 +219,7 @@ const FriendChat = () => {
                     className={`${style.fadeInLink} ${showLink && style.show}`}
                     onClick={handleLoanClick}
                   >
-                    Asking for a loan
+                    {t("friendButton1")}
                   </button>
                 )}
 
@@ -231,7 +228,7 @@ const FriendChat = () => {
                     className={`${style.fadeInLink} ${showLink && style.show}`}
                     onClick={handleAdviceClick}
                   >
-                    Asking for an advice
+                    {t("friendButton2")}
                   </button>
                 )}
               </motion.div>
@@ -244,7 +241,7 @@ const FriendChat = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
               >
-                <Link to="/after-chat">See the platform</Link>
+                <Link to="/after-chat">{t("friendButton3")}</Link>
               </motion.div>
             )}
           </div>

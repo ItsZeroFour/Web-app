@@ -4,10 +4,12 @@ import glowes from "../../assets/images/glowes.png";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import bank from "../../assets/icons/bank.png";
+import { useTranslation } from "react-i18next";
 
 const SeasonPass = () => {
   const [showNotification, setShowNotification] = useState(false);
   const [showLink, setShowLink] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (showNotification) {
@@ -52,13 +54,15 @@ const SeasonPass = () => {
         <div className={`wrapper ${style.season_pass__wrapper}`}>
           <div className={style.season_pass__main}>
             <div className={style.season_pass__text}>
-              <h1>IPL Season Pass, 33500₹</h1>
-              <p>Until the end of sales: 2 days</p>
+              <h1>{t("seasonPassTitle")}</h1>
+              <p>{t("seasonPassText")}</p>
             </div>
 
             <img src={glowes} alt="glowes" />
 
-            <button onClick={() => setShowNotification(true)}>Buy pass</button>
+            <button onClick={() => setShowNotification(true)}>
+              {t("seasonPassButton")}
+            </button>
           </div>
 
           {showNotification && (
@@ -85,7 +89,7 @@ const SeasonPass = () => {
                     <p>{`${new Date().getHours()}:${new Date().getMinutes()}`}</p>
                   </div>
 
-                  <p>You don't have enough funds. Balance: 6547₹</p>
+                  <p>{t("bankNot")}</p>
                 </div>
               </motion.div>
 
@@ -96,7 +100,7 @@ const SeasonPass = () => {
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <Link to="/call-friend">Call a friend for advice</Link>
+                  <Link to="/call-friend">{t("bankButton")}</Link>
                 </motion.div>
               )}
             </motion.div>

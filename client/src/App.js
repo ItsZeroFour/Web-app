@@ -16,35 +16,38 @@ import AfterChat from "./screens/after_chat/AfterChat";
 import Education1 from "./screens/education/Education1";
 import Education2 from "./screens/education/Education2";
 import Education3 from "./screens/education/Education3";
+import { Suspense } from "react";
 
 function App() {
   return (
     <div className="App">
-      <div className="page">
-        <main>
-          <Routes>
-            <Route path="/" element={<Starter />} />
-            <Route path="/main" element={<Main />} />
-            <Route path="/sister-chat" element={<FirstChat />} />
-            <Route path="/season-pass" element={<SeasonPass />} />
-            <Route path="/call-friend" element={<CallFriend />} />
-            <Route path="/friend-chat" element={<FriendChat />} />
-            <Route path="/after-chat" element={<AfterChat />} />
-            <Route path="/education-1" element={<Education1 />} />
-            <Route path="/education-2" element={<Education2 />} />
-            <Route path="/education-3" element={<Education3 />} />
-            <Route path="/game-start" element={<GameStart />} />
-            <Route path="/upload-image" element={<UploadImage />} />
-            <Route path="/upload-image/camera" element={<Camera />} />
-            <Route
-              path="/neyro-image-generate"
-              element={<NeyroImageGenerate />}
-            />
-            <Route path="/image-generated" element={<ImageGenerated />} />
-            <Route path="/final" element={<Final />} />
-          </Routes>
-        </main>
-      </div>
+      <Suspense fallback={() => <p>Loading...</p>}>
+        <div className="page">
+          <main>
+            <Routes>
+              <Route path="/" element={<Starter />} />
+              <Route path="/main" element={<Main />} />
+              <Route path="/sister-chat" element={<FirstChat />} />
+              <Route path="/season-pass" element={<SeasonPass />} />
+              <Route path="/call-friend" element={<CallFriend />} />
+              <Route path="/friend-chat" element={<FriendChat />} />
+              <Route path="/after-chat" element={<AfterChat />} />
+              <Route path="/education-1" element={<Education1 />} />
+              <Route path="/education-2" element={<Education2 />} />
+              <Route path="/education-3" element={<Education3 />} />
+              <Route path="/game-start" element={<GameStart />} />
+              <Route path="/upload-image" element={<UploadImage />} />
+              <Route path="/upload-image/camera" element={<Camera />} />
+              <Route
+                path="/neyro-image-generate"
+                element={<NeyroImageGenerate />}
+              />
+              <Route path="/image-generated" element={<ImageGenerated />} />
+              <Route path="/final" element={<Final />} />
+            </Routes>
+          </main>
+        </div>
+      </Suspense>
     </div>
   );
 }
