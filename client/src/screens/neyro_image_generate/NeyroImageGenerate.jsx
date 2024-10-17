@@ -3,10 +3,12 @@ import style from "./style.module.scss";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Banner from "../../components/banner/Banner";
+import { useTranslation } from "react-i18next";
 
 const NeyroImageGenerate = () => {
   const [aiImageGeneratedName, setAiImageGeneratedName] = useState("");
   const location = useLocation();
+  const { t } = useTranslation();
 
   const { file } = location.state || {};
   const navigate = useNavigate();
@@ -86,7 +88,7 @@ const NeyroImageGenerate = () => {
             <div className={style.neyro_image_generate__banner}>
               <Banner />
             </div>
-            <p>Waiting.....</p>
+            <p>{t("uploadImageWaiting")}</p>
           </div>
         </div>
       </div>

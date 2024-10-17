@@ -24,5 +24,65 @@
   "friendMessage8": "You know, my cousin was telling me about some trading platform last week. I haven't had a chance to try it myself yet, but here's a link, check it out 👉 binomo.com",
   "friendButton1": "Asking for a loan",
   "friendButton2": "Asking for an advice",
-  "friendButton3": "See the platform"
+  "friendButton3": "See the platform",
+
+  "afterChat1Title": "Don't give up, and you can gain",
+  "afterChat1Text": "Become successful on Binomo like Mohammed Shami in cricket",
+  "afterChat1Button": "Next",
+
+  "afterChat2Text": "Hey! Nice to meet you!",
+  "afterChat2Button": "Wow, Mohammed Shami!",
+
+  "afterChat3Text": "We are on Binomo website! Binomo is a  high-end trading platform with a wide range of financial assets.",
+  "afterChat3Button": "Can I earn money here?",
+
+  "afterChat4Text": "Yes! Trade amount starting from $1 so you won't lose a large amount of funds while you're still learning how to trade. ",
+  "afterChat4Button": "Can I train before trading?",
+
+  "afterChat5Name": "Mohammed Shami",
+  "afterChat5Text": "You can top up your balance in different ways and without commission",
+  "afterChat5Button": "So I can easily earn here?",
+
+  "afterChat6Title": "Thousands of traders make a net profit on the Binomo platform every day. Join them today",
+  "afterChat6Text": "The ticket in the $1000 draw",
+  "afterChat6Promo": "GAME1000",
+  "afterChat6Button1": "Stay in the game",
+  "afterChat6Button2": "Go to Binomo",
+  "afterChat6Button3": "Promotion rules",
+
+  "afterChat7Text": "I know that you have to earn money to buy IPL season pass. You can earn it here, but I kindly recommend you to pass education first...",
+  "afterChaT7Button1": "Let's try right now!",
+  "afterChaT7Button2": "Let's start from education!",
+
+  "education1Name": "Mohammed Shami",
+  "education1Text": "Binomo has many educational lectures that will help you learn how to trade",
+  "education1Button": "SOUNDS GOOD",
+
+  "education2Title1": "Upcoming",
+  "education2Title2": "Past",
+  "education2Today": "Today",
+  "education2Tomorrow": "Tomorrow",
+  "education2Text1": "Tokyo CPI",
+  "education2Text2": "Fed's Chair Powell Speech",
+  "education2Text3": "Monthly consumer price index",
+  "education2Text4": "We also have a calendar where you can see the dates of important events - for example, non-farm.",
+  "education2Button": "Non-farm? What is it?",
+
+  "education3Text": "The Non-Farm Payrolls (NFP) report shows U.S. job growth outside farming. It causes big market moves and signals economic health.",
+  "education3Button": "How can I find this information?",
+
+  "uploadImageTitle": "TAKE A PHOTO WITH SHAMI",
+  "uploadImageText": "By checking this box, you confirm that you have read, understood, and agree to be bound by these Rules of Use.",
+  "uploadImagePhoto": "Take a photo",
+  "uploadImageUpload": "Upload an image",
+  "uploadImageNot": "AI will generate photo with you and Mohhamed Shami",
+  "uploadCameraButton1": "Try another photo",
+  "uploadCameraButton2": "Ok",
+  "uploadImageLoading": "Loading....",
+
+  "uploadImageWaiting": "Waiting.....",
+
+  "imageGeneratedButton1": "Share with friends",
+  "imageGeneratedButton2": "Try another photo",
+  "imageGeneratedButton3": "Talk with Shami"
 }
