@@ -5,6 +5,7 @@ import imageImg from "../../assets/icons/image.svg";
 import { useNavigate } from "react-router-dom";
 import imageCompression from "browser-image-compression";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 const UploadImage = () => {
   const [check, setCheck] = useState(false);
@@ -12,6 +13,7 @@ const UploadImage = () => {
   const [image, setImage] = useState("");
   const [imageLoading, setImageLoading] = useState(false);
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   async function checkCamera() {
     try {
@@ -114,7 +116,7 @@ const UploadImage = () => {
               {" "}
               {!image ? (
                 <>
-                  <h1>Take a photo with Shami</h1>
+                  <h1>{t("uploadImageTitle")}</h1>
 
                   <div
                     className={style.upload_image__checkbox}
@@ -123,10 +125,7 @@ const UploadImage = () => {
                     <div className={style.upload_image__checkbox__item}>
                       {check ? <div></div> : ""}
                     </div>
-                    <p>
-                      By checking this box, You confirm that You have read,
-                      understood, and agree to be bound by these Rules of Use 
-                    </p>
+                    <p>{t("uploadImageText")}</p>
                   </div>
 
                   <div
@@ -143,8 +142,8 @@ const UploadImage = () => {
                       }
                     >
                       <img src={cameraImg} alt="camera" />
-                      <h2>Take a photo</h2>
-                      <p>AI will generate photo with you and Mohhamed Shami</p>
+                      <h2>{t("uploadImagePhoto")}</h2>
+                      <p>{t("uploadImageNot")}</p>
                     </button>
 
                     <input
@@ -160,8 +159,8 @@ const UploadImage = () => {
                       htmlFor={check && "create-post-img"}
                     >
                       <img src={imageImg} alt="image" />
-                      <h2>Upload an image</h2>
-                      <p>AI will generate photo with you and Mohhamed Shami</p>
+                      <h2>{t("uploadImageUpload")}</h2>
+                      <p>{t("uploadImageNot")}</p>
                     </label>
                   </div>
                 </>
@@ -170,9 +169,11 @@ const UploadImage = () => {
                   <img src={image} alt="camera image" />
 
                   <div className={style.camera__buttons}>
-                    <button onClick={uploadImage}>Ok</button>
+                    <button onClick={uploadImage}>
+                      {t("uploadCameraButton2")}
+                    </button>
                     <button onClick={() => setImage("")}>
-                      Try another photo
+                      {t("uploadCameraButton1")}
                     </button>
                   </div>
                 </div>
@@ -180,7 +181,7 @@ const UploadImage = () => {
             </>
           ) : (
             <div className={style.upload_image__loading}>
-              <p>Loading....</p>
+              <p>{t("uploadImageLoading")}</p>
             </div>
           )}
         </div>

@@ -126,7 +126,7 @@ const FirstChat = () => {
                 to="/season-pass"
                 className={`${style.fadeInLink} ${showLink && style.show}`}
               >
-                Go to the site
+                {t("goToSiteButton")}
               </Link>
             </motion.div>
           )}

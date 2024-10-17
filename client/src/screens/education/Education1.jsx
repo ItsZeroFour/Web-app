@@ -4,8 +4,11 @@ import screen1 from "../../assets/images/education/first-screen-1.png";
 import screen2 from "../../assets/images/education/first-screen-2.png";
 import person from "../../assets/images/after-chat-1.png";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Edication1 = () => {
+  const { t } = useTranslation();
+
   return (
     <section className={style.education}>
       <div className="container">
@@ -19,15 +22,12 @@ const Edication1 = () => {
             <img src={person} alt="person" />
 
             <div>
-              <h3>Mohammed Shami</h3>
-              <p>
-                Binomo has many educational lectures that will help you learn
-                how to trade
-              </p>
+              <h3>{t("education1Name")}</h3>
+              <p>{t("education1Text")}</p>
             </div>
           </div>
 
-          <Link to="/education-2">SOUNDS GOOD</Link>
+          <Link to="/education-2">{t("education1Button")}</Link>
         </div>
       </div>
     </section>

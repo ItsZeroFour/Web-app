@@ -12,9 +12,11 @@ import popularItem4 from "../../assets/images/popular/item4.png";
 import popularItemQr from "../../assets/images/popular/qr.png";
 import arrowIcon from "../../assets/icons/arrow.svg";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const AfterChat = () => {
   const [showScreenIndex, setShowScreenIndex] = useState(0);
+  const { t } = useTranslation();
 
   return (
     <section className={style.after_chat}>
@@ -34,26 +36,28 @@ const AfterChat = () => {
 
           {showScreenIndex === 0 ? (
             <>
-              <h1>Don’t give up, and you can gain</h1>
-              <p>Become successful on Binomo like Mohammed Shami in cricket</p>
+              <h1>{t("afterChat1Title")}</h1>
+              <p>{t("afterChat1Text")}</p>
 
               <div className={style.after_chat__image}>
                 <img src={afterChatImg} alt="after chat" />
               </div>
-              <button onClick={() => setShowScreenIndex(1)}>Next</button>
+              <button onClick={() => setShowScreenIndex(1)}>
+                {t("afterChat1Button")}
+              </button>
             </>
           ) : showScreenIndex === 1 ? (
             <div
               className={`${style.after_chat__person} ${style.after_chat__person__first}`}
             >
               <div className={style.after_chat__message}>
-                <p>Hey! Nice to meet you!</p>
+                <p>{t("afterChat2Text")}</p>
               </div>
 
               <img src={afterChatPerson1} alt="after chat 1" />
 
               <button onClick={() => setShowScreenIndex(2)}>
-                Wow, Mohammed Shami!
+                {t("afterChat2Button")}
               </button>
             </div>
           ) : showScreenIndex === 2 ? (
@@ -61,16 +65,13 @@ const AfterChat = () => {
               className={`${style.after_chat__person} ${style.after_chat__person__second}`}
             >
               <div className={style.after_chat__message}>
-                <p>
-                  We are on Binomo website! Binomo is a  high-end trading
-                  platform with a wide range of financial assets.
-                </p>
+                <p>{t("afterChat3Text")}</p>
               </div>
 
               <img src={afterChatPerson2} alt="after chat 2" />
 
               <button onClick={() => setShowScreenIndex(3)}>
-                Can I earn money here?
+                {t("afterChat3Button")}
               </button>
             </div>
           ) : showScreenIndex === 3 ? (
@@ -78,16 +79,13 @@ const AfterChat = () => {
               className={`${style.after_chat__person} ${style.after_chat__person__third}`}
             >
               <div className={style.after_chat__message}>
-                <p>
-                  Yes! Trade amount starting from $1so you won't lose a large
-                  amount of funds while you're still learning how to trade.
-                </p>
+                <p>{t("afterChat4Text")}</p>
               </div>
 
               <img src={afterChatPerson1} alt="after chat 3" />
 
               <button onClick={() => setShowScreenIndex(4)}>
-                Can I train before trading?
+                {t("afterChat4Button")}
               </button>
             </div>
           ) : showScreenIndex === 4 ? (
@@ -98,11 +96,8 @@ const AfterChat = () => {
                 <img src={afterChatPerson4} alt="personal img" />
 
                 <div>
-                  <h3>Mohammed Shami</h3>
-                  <p>
-                    You can top up your balance in different ways and without
-                    commission
-                  </p>
+                  <h3>{t("afterChat5Name")}</h3>
+                  <p>{t("afterChat5Text")}</p>
                 </div>
               </div>
 
@@ -149,23 +144,20 @@ const AfterChat = () => {
               </div>
 
               <button onClick={() => setShowScreenIndex(5)}>
-                So I can easily earn here?
+                {t("afterChat5Button")}
               </button>
             </div>
           ) : showScreenIndex === 5 ? (
             <div
               className={`${style.after_chat__person} ${style.after_chat__person__second} ${style.after_chat__person__fifth}`}
             >
-              <h2>
-                Thousands of traders make a net profit on the Bonomo platform
-                every day. Join them today
-              </h2>
+              <h2>{t("afterChat6Title")}</h2>
 
               <div className={style.after_chat__promo}>
-                <p>The ticket in the drawing is $1000</p>
+                <p>{t("afterChat6Text")}</p>
 
                 <Link to="/">
-                  <p>GAME1000</p>
+                  <p>{t("afterChat6Promo")}</p>
                   <img src={arrowIcon} alt="arrow" />
                 </Link>
               </div>
@@ -174,10 +166,10 @@ const AfterChat = () => {
 
               <div className={style.after_chat__links}>
                 <button onClick={() => setShowScreenIndex(6)}>
-                  Stay in the game
+                  {t("afterChat6Button1")}
                 </button>
-                <Link to="/">Go to Binomo</Link>
-                <Link to="/">Promotion rules</Link>
+                <Link to="/"> {t("afterChat6Button2")}</Link>
+                <Link to="/"> {t("afterChat6Button3")}</Link>
               </div>
             </div>
           ) : (
@@ -186,17 +178,15 @@ const AfterChat = () => {
             >
               <div className={style.after_chat__message}>
                 <p>
-                  I know that you have to earn money to buy IPL season pass. You
-                  can earn it here, but I kindly recommend you to pass education
-                  first...
+                  {t("afterChat7Text")}
                 </p>
               </div>
 
               <img src={afterChatPerson2} alt="after chat 3" />
 
               <div className={style.after_chat__buttons}>
-                <Link to="/upload-image">Let's try right now!</Link>
-                <Link to="/education-1">Let's start from education</Link>
+                <Link to="/upload-image">{t("afterChaT7Button1")}</Link>
+                <Link to="/education-1">{t("afterChaT7Button2")}</Link>
               </div>
             </div>
           )}

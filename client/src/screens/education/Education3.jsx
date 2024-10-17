@@ -4,8 +4,11 @@ import japan from "../../assets/images/education/japan.png";
 import usa from "../../assets/images/education/usa.png";
 import person from "../../assets/images/after-chat-4.png";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Education2 = () => {
+  const { t } = useTranslation();
+
   return (
     <section className={style.education}>
       <div className="container">
@@ -13,11 +16,11 @@ const Education2 = () => {
           <div className={style.education2__dates}>
             <div className={style.education2__items}>
               <div className={style.education2__item}>
-                <p>Upcoming</p>
+                <p>{t("education2Title1")}</p>
               </div>
 
               <div className={style.education2__item}>
-                <p>Past</p>
+                <p>{t("education2Title2")}</p>
               </div>
             </div>
 
@@ -62,26 +65,26 @@ const Education2 = () => {
           <ul className={style.education__news}>
             <li>
               <div>
-                <p>Today</p>
+                <p>{t("education2Today")}</p>
                 <img src={japan} alt="japan" />
               </div>
-              <p>Tokyo CPI</p>
+              <p>{t("education2Text1")}</p>
             </li>
 
             <li>
               <div>
-                <p>Tomorrow</p>
+                <p>{t("education2Tomorrow")}</p>
                 <img src={usa} alt="usa" />
               </div>
-              <p>Fed’s Chair Powell Speech</p>
+              <p>{t("education2Text2")}</p>
             </li>
 
             <li>
               <div>
-                <p>Tomorrow</p>
+                <p>{t("education2Tomorrow")}</p>
                 <img src={usa} alt="usa" />
               </div>
-              <p>Monthly consumer price index</p>
+              <p>{t("education2Text3")}</p>
             </li>
           </ul>
 
@@ -91,15 +94,12 @@ const Education2 = () => {
             <img src={person} alt="person" />
 
             <div>
-              <h3>Mohammed Shami</h3>
-              <p>
-                The Non-Farm Payrolls (NFP) report shows U.S. job growth outside
-                farming. It causes big market moves and signals economic health.
-              </p>
+              <h3>{t("education1Name")}</h3>
+              <p>{t("education3Text")}</p>
             </div>
           </div>
 
-          <Link to="/">Non-farm? What is it?</Link>
+          <Link to="/education-3">{t("education3Button")}</Link>
         </div>
       </div>
     </section>

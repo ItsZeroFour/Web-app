@@ -3,9 +3,11 @@ import style from "./style.module.scss";
 import friendImg from "../../assets/images/dewlan.png";
 import reset from "../../assets/icons/phone_down.svg";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const CallFriend = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -22,7 +24,7 @@ const CallFriend = () => {
           <img src={friendImg} alt="friend devlan" />
 
           <div className={style.call_friend__panel}>
-            <h1>Devlan</h1>
+            <h1>{t("friendName")}</h1>
 
             <div className={style.call_friend__reset}>
               <div>

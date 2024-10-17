@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import style from "./style.module.scss";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const ImageGenerated = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const { aiImageName } = location.state || {};
 
@@ -27,9 +29,9 @@ const ImageGenerated = () => {
           />
 
           <div className={style.image_generation__wrapper__buttons}>
-            <button>Share with friends</button>
-            <Link to="/upload-image">Try another photo</Link>
-            <Link to="/final">Talk with Shami</Link>
+            <button>{t("imageGeneratedButton1")}</button>
+            <Link to="/upload-image">{t("imageGeneratedButton2")}</Link>
+            <Link to="/final">{t("imageGeneratedButton3")}</Link>
           </div>
         </div>
       </div>
