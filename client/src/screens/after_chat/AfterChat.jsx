@@ -177,15 +177,13 @@ const AfterChat = () => {
               className={`${style.after_chat__person} ${style.after_chat__person__third} ${style.after_chat__person__sixth}`}
             >
               <div className={style.after_chat__message}>
-                <p>
-                  {t("afterChat7Text")}
-                </p>
+                <p>{t("afterChat7Text")}</p>
               </div>
 
               <img src={afterChatPerson2} alt="after chat 3" />
 
               <div className={style.after_chat__buttons}>
-                <Link to="/upload-image">{t("afterChaT7Button1")}</Link>
+                <Link to="/education-7">{t("afterChaT7Button1")}</Link>
                 <Link to="/education-1">{t("afterChaT7Button2")}</Link>
               </div>
             </div>
