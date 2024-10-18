@@ -452,7 +452,7 @@ app.get("/api/getQueue", async (req, res) => {
 /* NEYRO CONNECT */
 app.post("/api/uploadImage", async (req, res) => {
   try {
-    const serverAddress = process.env.NEYRO_SERVER_URL;
+    const serverAddress = "62.68.146.215:35525";
 
     /* Generate client id from filename (file name = client id) */
     const filePath = `${req.body.filename}`;
