@@ -99,11 +99,7 @@ const Education2 = () => {
             </div>
           </div>
 
-<<<<<<< HEAD
-          <Link to="/game-start">{t("education3Button")}</Link>
-=======
           <Link to="/education-4">{t("education3Button")}</Link>
->>>>>>> 60ec262bf28aa774b5f755dcc56a3c499c5db655
         </div>
       </div>
     </section>
