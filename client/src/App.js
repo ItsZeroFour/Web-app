@@ -20,6 +20,8 @@ import { Suspense } from "react";
 import Education7 from "./screens/education/Education7";
 import EducationGraphickUp from "./screens/education/EducationGraphickUp";
 import EducationGraphickDown from "./screens/education/EducationGraphickDown";
+import Education4 from "./screens/education/Education4";
+import Education5 from "./screens/education/Education5";
 
 function App() {
   return (
@@ -38,6 +40,8 @@ function App() {
               <Route path="/education-1" element={<Education1 />} />
               <Route path="/education-2" element={<Education2 />} />
               <Route path="/education-3" element={<Education3 />} />
+              <Route path="/education-4" element={<Education4 />} />
+              <Route path="/education-5" element={<Education5 />} />
               <Route path="/education-7" element={<Education7 />} />
               <Route
                 path="/education-graphick-up"

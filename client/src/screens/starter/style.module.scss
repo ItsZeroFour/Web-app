@@ -57,8 +57,17 @@
 
 .starter__wrapper > img {
   position: absolute;
-  top: 36%;
-  right: 15%;
+  top: 32%;
+  right: -85%;
+
+  width: 1200px;
+
+  @media (max-width: 450px) {
+    // right: -380px;
+    // left: -380px;
+    width: 270%;
+    top: 300px;
+  }
 }
 
 .starter__buttons {

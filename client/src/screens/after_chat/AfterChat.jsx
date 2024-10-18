@@ -10,12 +10,12 @@ import popularItem2 from "../../assets/images/popular/item2.png";
 import popularItem3 from "../../assets/images/popular/item3.png";
 import popularItem4 from "../../assets/images/popular/item4.png";
 import popularItemQr from "../../assets/images/popular/qr.png";
-import arrowIcon from "../../assets/icons/arrow.svg";
+import tabImg from "../../assets/images/Tab.png";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const AfterChat = () => {
-  const [showScreenIndex, setShowScreenIndex] = useState(0);
+  const [showScreenIndex, setShowScreenIndex] = useState(5);
   const { t } = useTranslation();
 
   return (
@@ -151,24 +151,21 @@ const AfterChat = () => {
             <div
               className={`${style.after_chat__person} ${style.after_chat__person__second} ${style.after_chat__person__fifth}`}
             >
-              <h2>{t("afterChat6Title")}</h2>
+              <h2>
+                {t("afterChat6Title")} <Link to="binomo.com">Binomo.com</Link>
+              </h2>
 
               <div className={style.after_chat__promo}>
                 <p>{t("afterChat6Text")}</p>
-
-                <Link to="/">
-                  <p>{t("afterChat6Promo")}</p>
-                  <img src={arrowIcon} alt="arrow" />
-                </Link>
               </div>
 
-              <img src={afterChatPerson1} alt="after chat 2" />
+              <img src={tabImg} alt="after chat 2" />
 
               <div className={style.after_chat__links}>
+                <Link to="/"> {t("afterChat6Button2")}</Link>
                 <button onClick={() => setShowScreenIndex(6)}>
                   {t("afterChat6Button1")}
                 </button>
-                <Link to="/"> {t("afterChat6Button2")}</Link>
                 <Link to="/"> {t("afterChat6Button3")}</Link>
               </div>
             </div>
