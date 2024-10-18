@@ -99,7 +99,7 @@ const Education2 = () => {
             </div>
           </div>
 
-          <Link to="/education-3">{t("education3Button")}</Link>
+          <Link to="/game-start">{t("education3Button")}</Link>
         </div>
       </div>
     </section>
