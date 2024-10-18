@@ -4,7 +4,9 @@ import logo from "../../assets/images/logo_2.svg";
 import afterChatImg from "../../assets/images/after_chat.png";
 import afterChatPerson1 from "../../assets/images/after-chat-1.png";
 import afterChatPerson2 from "../../assets/images/after-chat-2.png";
+import afterChatPerson3 from "../../assets/images/after-chat-3.png";
 import afterChatPerson4 from "../../assets/images/after-chat-4.png";
+import afterChatPerson5 from "../../assets/images/after-chat-5.png";
 import popularItem1 from "../../assets/images/popular/item1.png";
 import popularItem2 from "../../assets/images/popular/item2.png";
 import popularItem3 from "../../assets/images/popular/item3.png";
@@ -15,7 +17,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const AfterChat = () => {
-  const [showScreenIndex, setShowScreenIndex] = useState(5);
+  const [showScreenIndex, setShowScreenIndex] = useState(0);
   const { t } = useTranslation();
 
   return (
@@ -82,7 +84,7 @@ const AfterChat = () => {
                 <p>{t("afterChat4Text")}</p>
               </div>
 
-              <img src={afterChatPerson1} alt="after chat 3" />
+              <img src={afterChatPerson3} alt="after chat 3" />
 
               <button onClick={() => setShowScreenIndex(4)}>
                 {t("afterChat4Button")}
@@ -93,7 +95,7 @@ const AfterChat = () => {
               className={`${style.after_chat__person} ${style.after_chat__person__fourth}`}
             >
               <div className={style.after_chat__person__say}>
-                <img src={afterChatPerson4} alt="personal img" />
+                <img src={afterChatPerson5} alt="personal img" />
 
                 <div>
                   <h3>{t("afterChat5Name")}</h3>

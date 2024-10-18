@@ -3,7 +3,7 @@ import style from "./style.module.scss";
 import imageMain from "../../assets/images/education/education-4-main.png";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import person from "../../assets/images/after-chat-4.png";
+import person from "../../assets/images/after-chat-5.png";
 
 const Education5 = () => {
   const { t } = useTranslation();

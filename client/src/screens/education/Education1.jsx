@@ -2,7 +2,7 @@ import React from "react";
 import style from "./style.module.scss";
 import screen1 from "../../assets/images/education/first-screen-1.png";
 import screen2 from "../../assets/images/education/first-screen-2.png";
-import person from "../../assets/images/after-chat-1.png";
+import person from "../../assets/images/after-chat-6.png";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 

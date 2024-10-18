@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./style.module.scss";
-import person from "../../assets/images/after-chat-4.png";
+import person from "../../assets/images/after-chat-5.png";
 import { useTranslation } from "react-i18next";
 import graphick from "../../assets/images/graphick.svg";
 import { Link } from "react-router-dom";

@@ -2,7 +2,7 @@ import React from "react";
 import style from "./style.module.scss";
 import japan from "../../assets/images/education/japan.png";
 import usa from "../../assets/images/education/usa.png";
-import person from "../../assets/images/after-chat-4.png";
+import person from "../../assets/images/after-chat-6.png";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 

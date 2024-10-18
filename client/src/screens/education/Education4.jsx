@@ -5,7 +5,7 @@ import imageOther1 from "../../assets/images/education/education-4-1.png";
 import imageOther2 from "../../assets/images/education/education-4-2.png";
 import imageOther3 from "../../assets/images/education/education-4-3.png";
 import { Link, useNavigate } from "react-router-dom";
-import person from "../../assets/images/after-chat-4.png";
+import person from "../../assets/images/after-chat-5.png";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 
