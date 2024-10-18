@@ -4,13 +4,15 @@ import logo from "../../assets/images/logo_2.svg";
 import afterChatImg from "../../assets/images/after_chat.png";
 import afterChatPerson1 from "../../assets/images/after-chat-1.png";
 import afterChatPerson2 from "../../assets/images/after-chat-2.png";
+import afterChatPerson3 from "../../assets/images/after-chat-3.png";
 import afterChatPerson4 from "../../assets/images/after-chat-4.png";
+import afterChatPerson5 from "../../assets/images/after-chat-5.png";
 import popularItem1 from "../../assets/images/popular/item1.png";
 import popularItem2 from "../../assets/images/popular/item2.png";
 import popularItem3 from "../../assets/images/popular/item3.png";
 import popularItem4 from "../../assets/images/popular/item4.png";
 import popularItemQr from "../../assets/images/popular/qr.png";
-import arrowIcon from "../../assets/icons/arrow.svg";
+import tabImg from "../../assets/images/Tab.png";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -82,7 +84,7 @@ const AfterChat = () => {
                 <p>{t("afterChat4Text")}</p>
               </div>
 
-              <img src={afterChatPerson1} alt="after chat 3" />
+              <img src={afterChatPerson3} alt="after chat 3" />
 
               <button onClick={() => setShowScreenIndex(4)}>
                 {t("afterChat4Button")}
@@ -93,7 +95,7 @@ const AfterChat = () => {
               className={`${style.after_chat__person} ${style.after_chat__person__fourth}`}
             >
               <div className={style.after_chat__person__say}>
-                <img src={afterChatPerson4} alt="personal img" />
+                <img src={afterChatPerson5} alt="personal img" />
 
                 <div>
                   <h3>{t("afterChat5Name")}</h3>
@@ -151,24 +153,21 @@ const AfterChat = () => {
             <div
               className={`${style.after_chat__person} ${style.after_chat__person__second} ${style.after_chat__person__fifth}`}
             >
-              <h2>{t("afterChat6Title")}</h2>
+              <h2>
+                {t("afterChat6Title")} <Link to="binomo.com">Binomo.com</Link>
+              </h2>
 
               <div className={style.after_chat__promo}>
                 <p>{t("afterChat6Text")}</p>
-
-                <Link to="/">
-                  <p>{t("afterChat6Promo")}</p>
-                  <img src={arrowIcon} alt="arrow" />
-                </Link>
               </div>
 
-              <img src={afterChatPerson1} alt="after chat 2" />
+              <img src={tabImg} alt="after chat 2" />
 
               <div className={style.after_chat__links}>
+                <Link to="/"> {t("afterChat6Button2")}</Link>
                 <button onClick={() => setShowScreenIndex(6)}>
                   {t("afterChat6Button1")}
                 </button>
-                <Link to="/"> {t("afterChat6Button2")}</Link>
                 <Link to="/"> {t("afterChat6Button3")}</Link>
               </div>
             </div>

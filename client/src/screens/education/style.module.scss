@@ -78,10 +78,10 @@
 
   img {
     position: absolute;
-    width: 300%;
-    height: 300%;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-    left: -130%;
+    left: -35%;
     top: 0%;
   }
 
@@ -200,7 +200,7 @@
   img {
     width: 100%;
     height: 100%;
-    left: -27%;
+    left: -30%;
     top: 0%;
   }
 
@@ -301,4 +301,191 @@
 
 .education__person_graphick {
   width: 90%;
+}
+
+.education4__images {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 90%;
+  margin-top: 10px;
+
+  img {
+    border-radius: 10px;
+  }
+}
+
+.education4__container1 > img {
+  width: 100%;
+  height: auto;
+}
+
+.education4__container1 {
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    content: "The U.S. economy added 336,000 jobs";
+    font-size: 24px;
+    color: var(--color-white);
+    font-weight: 500;
+    padding: 10px;
+    position: absolute;
+    width: 70%;
+    line-height: 120%;
+    height: 100%;
+    z-index: 2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: rgba(16, 16, 16, 0.502);
+    z-index: 1;
+  }
+}
+
+.education4__container2 {
+  position: relative;
+
+  &::before {
+    content: "Oil prices will rise by 20%";
+    font-size: 12px;
+    color: var(--color-white);
+    font-weight: 500;
+    padding: 10px;
+    position: absolute;
+    width: 80%;
+    line-height: 120%;
+    height: 100%;
+    z-index: 2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: rgba(16, 16, 16, 0.502);
+    z-index: 1;
+  }
+}
+
+.education4__container3 {
+  position: relative;
+
+  &::before {
+    content: "Football review";
+    font-size: 12px;
+    color: var(--color-white);
+    font-weight: 500;
+    padding: 10px;
+    position: absolute;
+    width: 80%;
+    line-height: 120%;
+    height: 100%;
+    z-index: 2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: rgba(16, 16, 16, 0.502);
+    z-index: 1;
+  }
+}
+
+.education4__container4 {
+  position: relative;
+
+  &::before {
+    content: "Weather forecast";
+    font-size: 12px;
+    color: var(--color-white);
+    font-weight: 500;
+    padding: 10px;
+    position: absolute;
+    width: 80%;
+    line-height: 120%;
+    height: 100%;
+    z-index: 2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: rgba(16, 16, 16, 0.1);
+    z-index: 1;
+  }
+}
+
+.education4__images__list {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+
+  div {
+    width: 125px;
+  }
+
+  img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+  }
+}
+
+.education__person_4 {
+  width: 90%;
+}
+
+.education4__image {
+  width: 90%;
+  margin-top: 20px;
+
+  img {
+    border-radius: 10px;
+  }
+}
+
+.education__person_5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
+  width: 90%;
+  margin-top: 0;
+
+  img {
+    top: 20%;
+    left: 30%;
+    width: 150px;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+
+    p {
+      margin-top: 0;
+    }
+  }
 }
