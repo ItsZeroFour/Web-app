@@ -17,6 +17,9 @@ import Education1 from "./screens/education/Education1";
 import Education2 from "./screens/education/Education2";
 import Education3 from "./screens/education/Education3";
 import { Suspense } from "react";
+import Education7 from "./screens/education/Education7";
+import EducationGraphickUp from "./screens/education/EducationGraphickUp";
+import EducationGraphickDown from "./screens/education/EducationGraphickDown";
 
 function App() {
   return (
@@ -35,6 +38,15 @@ function App() {
               <Route path="/education-1" element={<Education1 />} />
               <Route path="/education-2" element={<Education2 />} />
               <Route path="/education-3" element={<Education3 />} />
+              <Route path="/education-7" element={<Education7 />} />
+              <Route
+                path="/education-graphick-up"
+                element={<EducationGraphickUp />}
+              />
+              <Route
+                path="/education-graphick-down"
+                element={<EducationGraphickDown />}
+              />
               <Route path="/game-start" element={<GameStart />} />
               <Route path="/upload-image" element={<UploadImage />} />
               <Route path="/upload-image/camera" element={<Camera />} />
