@@ -32,7 +32,7 @@ const Education5 = () => {
             </div>
           </div>
 
-          <Link to="/game-start">Let's try!</Link>
+          <Link to="/education-6">Let's try!</Link>
         </div>
       </div>
     </section>

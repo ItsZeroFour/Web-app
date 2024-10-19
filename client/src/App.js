@@ -22,6 +22,9 @@ import EducationGraphickUp from "./screens/education/EducationGraphickUp";
 import EducationGraphickDown from "./screens/education/EducationGraphickDown";
 import Education4 from "./screens/education/Education4";
 import Education5 from "./screens/education/Education5";
+import Education6 from "./screens/education/Education6";
+import EducationGraphickThird from "./screens/education/EducationGraphichThird";
+import GroupChat from "./screens/group_chat/GroupChat";
 
 function App() {
   return (
@@ -42,6 +45,7 @@ function App() {
               <Route path="/education-3" element={<Education3 />} />
               <Route path="/education-4" element={<Education4 />} />
               <Route path="/education-5" element={<Education5 />} />
+              <Route path="/education-6" element={<Education6 />} />
               <Route path="/education-7" element={<Education7 />} />
               <Route
                 path="/education-graphick-up"
@@ -51,6 +55,11 @@ function App() {
                 path="/education-graphick-down"
                 element={<EducationGraphickDown />}
               />
+              <Route
+                path="/education-graphick-third"
+                element={<EducationGraphickThird />}
+              />
+              <Route path="/group-chat" element={<GroupChat />} />
               <Route path="/game-start" element={<GameStart />} />
               <Route path="/upload-image" element={<UploadImage />} />
               <Route path="/upload-image/camera" element={<Camera />} />
