@@ -71,8 +71,33 @@
   "education3Text": "The Non-Farm Payrolls (NFP) report shows U.S. job growth outside farming. It causes big market moves and signals economic health.",
   "education3Button": "How can I find this information?",
 
+  "education4ImageText1": "The U.S. economy added 336,000 jobs",
+  "education4ImageText2": "Oil prices will rise by 20%",
+  "education4ImageText3": "Football review",
+  "education4ImageText4": "Weather forecast",
+  "education4Text": "Follow the news that is written on this topic. Click on the appropriate news on this screen.",
+  "educationButton1": "How can I find this information?",
+
+  "education5Text": "This news clearly indicates that the dollar will rise. Now you can go to Binomo and try trading.",
+  "education5Button": "Let's try!",
+
   "education7Text": "You have to predict whether the graph will go up or down",
+  "education7Demo": "Your demo balance",
+  "education7Down": "Down",
+  "education7Up": "Up",
+  "education7Ok": "Ok",
   "educationGraphickText": "No, you're wrong. I still advise you to go through a simple training first.",
+
+  "educationGraphickUp": "We just read the news that the dollar will rise. Better click \"Down\".",
+  "educationGraphickDown": "We just read the news that the dollar will rise. Better click \"Up\".",
+  "educationGraphickThird": "We just read the news that the dollar will rise.",
+  "educationGraphickButton": "Ask Devlan and sister",
+
+  "groupTitle": "Sister and Devlan's group",
+  "groupMessage1": "Guys, I've earned money on trading! @Sister, now I can buy IPL pass for us!",
+  "groupMessage2": "Honey, I'm so glad! You are the best brother in the world!",
+  "groupMessage3": "Wow bro you really did it! I'll meet you on cricket match this weekend",
+  "groupButton": "Let's go!",
 
   "uploadImageTitle": "TAKE A PHOTO WITH SHAMI",
   "uploadImageText": "By checking this box, you confirm that you have read, understood, and agree to be bound by these Rules of Use.",
@@ -87,5 +112,9 @@
 
   "imageGeneratedButton1": "Share with friends",
   "imageGeneratedButton2": "Try another photo",
-  "imageGeneratedButton3": "Talk with Shami"
+  "imageGeneratedButton3": "Talk with Shami",
+
+  "gameStartText": "Great! Now let's make a photo together",
+  "gameStartButton1": "Let`s go",
+  "gameStartButton2": "No, thanks"
 }

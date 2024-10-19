@@ -32,19 +32,29 @@ const Education4 = () => {
           <div className={style.education4__images}>
             <div
               className={style.education4__container1}
+              data-text={t("education4ImageText1")}
               onClick={() => navigate("/education-5")}
             >
               <img src={imageMain} alt="image main" />
             </div>
 
             <div className={style.education4__images__list}>
-              <div className={style.education4__container2}>
+              <div
+                className={style.education4__container2}
+                data-text={t("education4ImageText2")}
+              >
                 <img src={imageOther1} alt="image other 1" />
               </div>
-              <div className={style.education4__container3}>
+              <div
+                className={style.education4__container3}
+                data-text={t("education4ImageText3")}
+              >
                 <img src={imageOther2} alt="image other 2" />
               </div>
-              <div className={style.education4__container4}>
+              <div
+                className={style.education4__container4}
+                data-text={t("education4ImageText4")}
+              >
                 <img src={imageOther3} alt="image other 3" />
               </div>
             </div>
@@ -57,10 +67,7 @@ const Education4 = () => {
 
             <div>
               <h3>{t("education1Name")}</h3>
-              <p>
-                Follow the news that is written on this topic. Click on the
-                appropriate news on this screen.
-              </p>
+              <p>{t("education4Text")}</p>
             </div>
           </div>
 
@@ -72,7 +79,7 @@ const Education4 = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
               >
-                <Link to="/education-5">How can I find this information?</Link>
+                <Link to="/education-5">{t("educationButton1")}</Link>
               </motion.div>
             )}
           </div>

@@ -25,7 +25,7 @@ const Education7 = () => {
 
           <div className={style.educatio7__balance}>
             <div className={style.educatio7__balance__demo}>
-              <p>Your demo balance</p>
+              <p>{t("education7Demo")}</p>
               <h1>10000₹</h1>
             </div>
 
@@ -41,8 +41,8 @@ const Education7 = () => {
           />
 
           <div className={style.educatio7__buttons}>
-            <Link to="/education-graphick-down">Down</Link>
-            <Link to="/education-graphick-up">Up</Link>
+            <Link to="/education-graphick-down">{t("education7Down")}</Link>
+            <Link to="/education-graphick-up">{t("education7Up")}</Link>
           </div>
         </div>
       </div>

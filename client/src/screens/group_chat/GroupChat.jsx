@@ -67,7 +67,7 @@ const GroupChat = () => {
               <img src={groupChatImage} alt="Sister" />
             </div>
 
-            <h3>Sister and Devlan's group</h3>
+            <h3>{t("groupTitle")}</h3>
           </div>
 
           <div className={style.first__chat__history}>
@@ -80,10 +80,7 @@ const GroupChat = () => {
                 transition={transition}
               >
                 <div className={style.first__chat__message__content}>
-                  <p>
-                    Guys, I've earned money on trading! @Sister, now I can buy
-                    IPL pass for us!
-                  </p>
+                  <p>{t("groupMessage1")}</p>
                 </div>
                 <div className={style.first__chat__message__avatar}>
                   <img src={personalImageAvatar} alt="personal avatar" />
@@ -103,9 +100,7 @@ const GroupChat = () => {
                   <img src={sister} alt="sister avatar" />
                 </div>
                 <div className={style.first__chat__message__content}>
-                  <p>
-                    Honey, I'm so glad! You are the best brother in the world!
-                  </p>
+                  <p>{t("groupMessage2")}</p>
                 </div>
               </motion.div>
             )}
@@ -122,10 +117,7 @@ const GroupChat = () => {
                   <img src={friend} alt="sister avatar" />
                 </div>
                 <div className={style.first__chat__message__content}>
-                  <p>
-                    Wow bro you really did it! I'll meet you on cricket match
-                    this weekend
-                  </p>
+                  <p>{t("groupMessage3")}</p>
                 </div>
               </motion.div>
             )}
@@ -142,7 +134,7 @@ const GroupChat = () => {
                 to="/game-start"
                 className={`${style.fadeInLink} ${showLink && style.show}`}
               >
-                Let's go!
+                {t("groupButton")}
               </Link>
             </motion.div>
           )}

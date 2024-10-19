@@ -17,9 +17,7 @@ const EducationGraphickThird = () => {
 
   useEffect(() => {
     const changeText = setTimeout(() => {
-      setText(
-        'We just read the news that the dollar will rise. Better click "Up".'
-      );
+      setText(t("educationGraphickThird"));
     }, 4500);
 
     const showButton = setTimeout(() => {
@@ -99,7 +97,7 @@ const EducationGraphickThird = () => {
 
           <div className={style.educatio7__balance}>
             <div className={style.educatio7__balance__demo}>
-              <p>Your demo balance</p>
+              <p>{t("education7Demo")}</p>
               <h1>9900₹</h1>
             </div>
 
@@ -134,7 +132,7 @@ const EducationGraphickThird = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
               >
-                <Link to="/group-chat">Ask Devlan and sister</Link>
+                <Link to="/group-chat">{t("educationGraphickButton")}</Link>
               </motion.div>
             )}
           </div>

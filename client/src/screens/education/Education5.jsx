@@ -13,7 +13,10 @@ const Education5 = () => {
       <div className="container">
         <div className={`wrapper ${style.education__wrapper}`}>
           <div className={style.education4__image}>
-            <div className={style.education4__container1}>
+            <div
+              className={style.education4__container1}
+              data-text={t("education4ImageText1")}
+            >
               <img src={imageMain} alt="image main" />
             </div>
           </div>
@@ -25,14 +28,11 @@ const Education5 = () => {
 
             <div>
               <h3>{t("education1Name")}</h3>
-              <p>
-                This news clearly indicates that the dollar will rise. Now you
-                can go to Binomo and try trading.
-              </p>
+              <p>{t("education5Text")}</p>
             </div>
           </div>
 
-          <Link to="/education-6">Let's try!</Link>
+          <Link to="/education-6">{t("education5Button")}</Link>
         </div>
       </div>
     </section>

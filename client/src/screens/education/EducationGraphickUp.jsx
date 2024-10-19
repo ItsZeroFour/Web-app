@@ -15,7 +15,7 @@ const EducationGraphickUp = () => {
 
   useEffect(() => {
     const changeText = setTimeout(() => {
-      setText(t("educationGraphickText"));
+      setText(t("educationGraphickUp"));
     }, 4500);
 
     const showButton = setTimeout(() => {
@@ -45,7 +45,7 @@ const EducationGraphickUp = () => {
 
           <div className={style.educatio7__balance}>
             <div className={style.educatio7__balance__demo}>
-              <p>Your demo balance</p>
+              <p>{t("education7Demo")}</p>
               <h1>9900₹</h1>
             </div>
 
@@ -69,7 +69,7 @@ const EducationGraphickUp = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
               >
-                <Link to="/education-1">Ok</Link>
+                <Link to="/education-1">{t("education7Ok")}</Link>
               </motion.div>
             )}
           </div>
