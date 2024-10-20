@@ -42,4 +42,8 @@
   width: 100%;
   position: absolute;
   top: 0;
+
+  @media (max-width: 450px) {
+    top: 1%;
+  }
 }

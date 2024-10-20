@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./style.module.scss";
-import manImg from "../../assets/images/upload-man-1.png";
+import manImg from "../../assets/images/after-chat-1.png";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 

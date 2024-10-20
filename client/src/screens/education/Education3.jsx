@@ -12,7 +12,9 @@ const Education2 = () => {
   return (
     <section className={style.education}>
       <div className="container">
-        <div className={`wrapper ${style.education__wrapper}`}>
+        <div
+          className={`wrapper ${style.education__wrapper} ${style.education__wrapper_2}`}
+        >
           <div className={style.education2__dates}>
             <div className={style.education2__items}>
               <div className={style.education2__item}>

@@ -57,7 +57,7 @@
     text-align: center;
 
     @media (max-width: 450px) {
-      top: 80%;
+      top: 79%;
     }
   }
 
@@ -98,12 +98,16 @@
     top: 20%;
   }
 
+  @media(max-width: 450px) {
+    margin-bottom: 0px;
+  }
+
   @media (max-height: 750px) and (max-width: 450px) {
     margin-bottom: 0px;
   }
 
   @media (max-height: 700px) and (max-width: 450px) {
-    margin-bottom: -60px;
+    margin-bottom: -120px;
   }
 
   @media (max-height: 645px) and (max-width: 450px) {
@@ -245,7 +249,7 @@
     margin-bottom: 20px;
 
     @media (max-width: 450px) {
-      margin-bottom: 80px;
+      margin-bottom: 100px;
     }
   }
 }
@@ -464,7 +468,7 @@
 
   @media (max-width: 450px) {
     .after_chat__message {
-      margin-top: 100px;
+      margin-top: 10px;
     }
   }
 
@@ -488,7 +492,7 @@
     }
 
     @media (max-width: 450px) {
-      top: 70%;
+      top: 65%;
     }
   }
 }

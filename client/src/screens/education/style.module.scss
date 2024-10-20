@@ -6,6 +6,7 @@
   padding-bottom: 10px;
 
   position: relative;
+  overflow: hidden;
 
   display: flex;
   flex-direction: column;
@@ -26,6 +27,7 @@
     width: 70%;
     text-align: center;
     border-radius: 30px;
+    margin-bottom: 60px;
 
     @media (max-height: 525px) {
       padding: 6px;
@@ -44,23 +46,24 @@
     width: 100%;
     border-radius: 10px;
 
-    @media (max-width: 450px) {
-      height: 205px;
-      object-fit: cover;
-    }
-
-    @media (max-height: 615px) {
-      height: 180px;
-      object-fit: cover;
-    }
-
-    @media (max-height: 565px) {
-      height: 160px;
+    @media (max-height: 800px) {
+      width: 90%;
     }
   }
 
   @media (max-width: 450px) {
     width: 90%;
+  }
+
+  @media (max-height: 800px) {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.education__person__1 {
+  @media (max-height: 800px) {
+    width: 80% !important;
   }
 }
 
@@ -104,6 +107,11 @@
         margin-top: 5px;
       }
     }
+
+    @media (max-width: 350px) {
+      margin-left: 120px;
+      padding: 5px;
+    }
   }
 
   @media (max-width: 450px) {
@@ -136,6 +144,12 @@
     @media (max-width: 325px) {
       width: 140px;
     }
+  }
+}
+
+.education__wrapper_2 {
+  a {
+    font-size: 14px;
   }
 }
 
@@ -274,11 +288,16 @@
       opacity: 0.7;
     }
   }
+
+  @media (max-width: 450px) {
+    margin-bottom: 60px;
+  }
 }
 
 .educatio_graphick__buttons {
   display: flex;
-  margin-top: auto;
+  // margin-top: auto;
+
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -294,6 +313,18 @@
 
   button {
     padding: 10px;
+  }
+}
+
+.educatio_graphick__buttons__wrapper {
+  @media (max-width: 450px) {
+    margin-bottom: 80px;
+  }
+}
+
+.educatio__graphick__buttons__wrapper {
+  @media (max-width: 450px) {
+    margin-bottom: 90px;
   }
 }
 
@@ -474,11 +505,35 @@
   height: 500px;
   width: 90%;
   margin-top: 0;
+  position: relative;
 
   img {
-    top: 20%;
-    left: 30%;
-    width: 150px;
+    top: 35%;
+    left: -26%;
+    width: 150%;
+    height: 400px;
+    position: absolute;
+
+    @media (max-height: 850px) and (max-width: 450px) {
+      top: 30%;
+      left: -60%;
+      width: 220%;
+      height: 600px;
+    }
+
+    @media (max-height: 739px) and (max-width: 450px) {
+      top: 35%;
+      left: -49%;
+      width: 200%;
+      height: 500px;
+    }
+
+    @media (max-width: 660px) and (max-width: 450px) {
+      top: 45%;
+      width: 150%;
+      height: 400px;
+      left: -24%;
+    }
   }
 
   div {
@@ -492,6 +547,10 @@
     p {
       margin-top: 0;
     }
+  }
+
+  @media (max-width: 450px) {
+    height: 42vh;
   }
 }
 

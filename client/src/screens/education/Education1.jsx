@@ -12,13 +12,13 @@ const Edication1 = () => {
   return (
     <section className={style.education}>
       <div className="container">
-        <div className={`wrapper ${style.education__wrapper}`}>
+        <div className={`wrapper ${style.education__wrapper} ${style.education__wrapper__1}`}>
           <div className={style.education__screens}>
             <img src={screen1} alt="screen 1" />
             <img src={screen2} alt="screen 2" />
           </div>
 
-          <div className={style.education__person}>
+          <div className={`${style.education__person} ${style.education__person__1}`}>
             <img src={person} alt="person" />
 
             <div>

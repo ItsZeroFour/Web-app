@@ -3,7 +3,7 @@ import style from "./style.module.scss";
 import imageMain from "../../assets/images/education/education-4-main.png";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import person from "../../assets/images/after-chat-5.png";
+import person from "../../assets/images/after-chat-1.png";
 
 const Education5 = () => {
   const { t } = useTranslation();
@@ -11,7 +11,9 @@ const Education5 = () => {
   return (
     <section className={style.education}>
       <div className="container">
-        <div className={`wrapper ${style.education__wrapper}`}>
+        <div
+          className={`wrapper ${style.education__wrapper} ${style.education__wrapper__1}`}
+        >
           <div className={style.education4__image}>
             <div
               className={style.education4__container1}

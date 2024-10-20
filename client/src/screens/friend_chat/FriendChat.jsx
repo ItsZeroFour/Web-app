@@ -236,7 +236,7 @@ const FriendChat = () => {
 
             {showLinkButton && (
               <motion.div
-                className={style.friend_chat__link}
+                className={`${style.friend_chat__link} ${style.friend_chat__link_2}`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}

@@ -89,7 +89,7 @@ const SeasonPass = () => {
                     <p>{`${new Date().getHours()}:${new Date().getMinutes()}`}</p>
                   </div>
 
-                  <p>{t("bankNot")}</p>
+                  <p>{t("bankNot")} 6547₹</p>
                 </div>
               </motion.div>
 

@@ -44,6 +44,10 @@
   p {
     opacity: 0.7;
     width: 90%;
+
+    a {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -134,6 +138,16 @@
     height: 75%;
     width: 90%;
     object-fit: cover;
+
+    @media (max-width: 450px) {
+      height: 60%;
+    }
+  }
+
+  @media (max-width: 450px) {
+    justify-content: start;
+    align-items: center;
+    margin-top: 40px;
   }
 }
 

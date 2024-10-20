@@ -22,6 +22,17 @@
 
 .game_start__image {
   position: absolute;
+
+  img {
+    width: 1000px;
+    height: 1000px;
+    object-fit: contain;
+  }
+
+  @media (max-width: 450px) {
+    top: 12%;
+    // right: -65%;
+  }
 }
 
 .game_start__message {
@@ -71,5 +82,9 @@
     border-radius: 40px;
     background: var(--color-yellow);
     font-size: 20px;
+  }
+
+  @media (max-width: 450px) {
+    margin-bottom: 125px;
   }
 }

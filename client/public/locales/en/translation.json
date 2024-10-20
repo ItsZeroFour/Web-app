@@ -10,7 +10,7 @@
   "seasonPassText": "Until the end of sales: 4 days",
   "seasonPassButton": "Buy pass",
 
-  "bankNot": "You don't have enough funds. Balance: 6547₹.",
+  "bankNot": "You don't have enough funds. Balance:",
   "bankButton": "Call a friend for advice",
 
   "friendName": "DEVLAN",
@@ -36,7 +36,7 @@
   "afterChat3Text": "We are on Binomo website! Binomo is a  high-end trading platform with a wide range of financial assets.",
   "afterChat3Button": "Can I earn money here?",
 
-  "afterChat4Text": "Yes! Trade amount starting from $1 so you won't lose a large amount of funds while you're still learning how to trade. ",
+  "afterChat4Text": "Yes! You can open a trade for any amount from 80₹",
   "afterChat4Button": "Can I train before trading?",
 
   "afterChat5Name": "Mohammed Shami",
@@ -76,13 +76,13 @@
   "education4ImageText3": "Football review",
   "education4ImageText4": "Weather forecast",
   "education4Text": "Follow the news that is written on this topic. Click on the appropriate news on this screen.",
-  "educationButton1": "How can I find this information?",
+  "educationButton1": "Help me to choose",
 
   "education5Text": "This news clearly indicates that the dollar will rise. Now you can go to Binomo and try trading.",
   "education5Button": "Let's try!",
 
   "education7Text": "You have to predict whether the graph will go up or down",
-  "education7Demo": "Your demo balance",
+  "education7Demo": "Your balance",
   "education7Down": "Down",
   "education7Up": "Up",
   "education7Ok": "Ok",
@@ -100,7 +100,9 @@
   "groupButton": "Let's go!",
 
   "uploadImageTitle": "TAKE A PHOTO WITH SHAMI",
-  "uploadImageText": "By checking this box, you confirm that you have read, understood, and agree to be bound by these Rules of Use.",
+  "uploadImageText": "By checking this box, you confirm that you have read, understood, and agree to be bound by these",
+  "uploadImageRules": "Rules of Use",
+
   "uploadImagePhoto": "Take a photo",
   "uploadImageUpload": "Upload an image",
   "uploadImageNot": "AI will generate photo with you and Mohhamed Shami",

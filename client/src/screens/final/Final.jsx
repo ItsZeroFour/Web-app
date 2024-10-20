@@ -16,13 +16,25 @@ const Final = () => {
             </h1>
 
             <div className={style.final__promo}>
-              <Link to="/">
+              <Link
+                to="#"
+                onClick={() => {
+                  navigator.clipboard.writeText("GAME1000");
+                  alert("Success!");
+                }}
+              >
                 GAME1000 <img src={arrowImage} alt="arrow" />
               </Link>
 
               <p>TAKE A CHANCE TO WIN REAL MONEY </p>
 
-              <Link to="/">
+              <Link
+                to="#"
+                onClick={() => {
+                  navigator.clipboard.writeText("TRADINGGAME");
+                  alert("Success!");
+                }}
+              >
                 TRADINGGAME <img src={arrowImage} alt="arrow" />
               </Link>
 
@@ -31,7 +43,9 @@ const Final = () => {
 
             <img src={manImg} alt="man" />
 
-            <Link to="/">Go to Binomo</Link>
+            <Link to="https://binomo.com/auth?a=bfbfde47c861&ac=trading_game&utm_source=trading_game&utm_medium=trading_game&utm_campaign=trading_game#SignUp ">
+              Go to Binomo
+            </Link>
           </div>
         </div>
       </div>

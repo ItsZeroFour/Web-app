@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import style from "./style.module.scss";
 import person from "../../assets/images/after-chat-4.png";
+import person2 from "../../assets/images/after-chat-5.png";
 import { useTranslation } from "react-i18next";
 import graphick from "../../assets/graphicks/from_top_to_bottom.json";
 import { Link } from "react-router-dom";
@@ -35,7 +36,7 @@ const EducationGraphickUp = () => {
           <div
             className={`${style.education__person} ${style.education__person_2} ${style.education__person_graphick}`}
           >
-            <img src={person} alt="person" />
+            <img src={text ? person : person2} alt="person" />
 
             <div>
               <h3>{t("education1Name")}</h3>
@@ -61,7 +62,10 @@ const EducationGraphickUp = () => {
             style={{ width: "90%", height: 350 }}
           />
 
-          <div style={{ height: 60, width: "100%" }}>
+          <div
+            style={{ height: 60, width: "100%" }}
+            className={style.educatio_graphick__buttons__wrapper}
+          >
             {showButton && (
               <motion.div
                 className={style.educatio_graphick__buttons}

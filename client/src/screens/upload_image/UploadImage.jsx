@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import style from "./style.module.scss";
 import cameraImg from "../../assets/icons/camera.svg";
 import imageImg from "../../assets/icons/image.svg";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import imageCompression from "browser-image-compression";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
@@ -125,7 +125,12 @@ const UploadImage = () => {
                     <div className={style.upload_image__checkbox__item}>
                       {check ? <div></div> : ""}
                     </div>
-                    <p>{t("uploadImageText")}</p>
+                    <p>
+                      {t("uploadImageText")}{" "}
+                      <Link to="https://blog.binomo.com/celebrityphoto/">
+                        {t("uploadImageRules")}.
+                      </Link>
+                    </p>
                   </div>
 
                   <div

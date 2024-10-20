@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import style from "./style.module.scss";
 import person from "../../assets/images/after-chat-4.png";
+import person2 from "../../assets/images/after-chat-6.png";
 import { useTranslation } from "react-i18next";
 import graphick from "../../assets/graphicks/third-graphick.json";
 import { Link } from "react-router-dom";
@@ -78,21 +79,23 @@ const EducationGraphickThird = () => {
                     <p>{`${new Date().getHours()}:${new Date().getMinutes()}`}</p>
                   </div>
 
-                  <p>{t("bankNot")}</p>
+                  <p>{t("bankNot")} 11241₹</p>
                 </div>
               </motion.div>
             </motion.div>
           ) : (
-            <div
-              className={`${style.education__person} ${style.education__person_2} ${style.education__person_graphick}`}
-            >
-              <img src={person} alt="person" />
+            <>
+              <div
+                className={`${style.education__person} ${style.education__person_2} ${style.education__person_graphick}`}
+              >
+                <img src={text ? person : person2} alt="person" />
 
-              <div>
-                <h3>{t("education1Name")}</h3>
-                <p>{text ? text : t("education7Text")}</p>
+                <div>
+                  <h3>{t("education1Name")}</h3>
+                  <p>{text ? text : t("education7Text")}</p>
+                </div>
               </div>
-            </div>
+            </>
           )}
 
           <div className={style.educatio7__balance}>
@@ -113,7 +116,10 @@ const EducationGraphickThird = () => {
             style={{ width: "90%", height: 350 }}
           />
 
-          <div style={{ height: 60, width: "100%" }}>
+          <div
+            style={{ height: 60, width: "100%" }}
+            className={style.educatio__graphick__buttons__wrapper}
+          >
             {showButton && !showNot && (
               <motion.div
                 className={style.educatio_graphick__buttons}

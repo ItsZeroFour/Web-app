@@ -164,18 +164,28 @@ const AfterChat = () => {
               <img src={tabImg} alt="after chat 2" />
 
               <div className={style.after_chat__links}>
-                <Link to="/"> {t("afterChat6Button2")}</Link>
+                <Link
+                  to="https://binomo.com/auth?a=bfbfde47c861&ac=trading_game&utm_source=trading_game&utm_medium=trading_game&utm_campaign=trading_game#SignUp"
+                  target="_blank"
+                >
+                  {t("afterChat6Button2")}
+                </Link>
                 <button onClick={() => setShowScreenIndex(6)}>
                   {t("afterChat6Button1")}
                 </button>
-                <Link to="/"> {t("afterChat6Button3")}</Link>
+                <Link to="https://blog.binomo.com/tradinggame2024/">
+                  {" "}
+                  {t("afterChat6Button3")}
+                </Link>
               </div>
             </div>
           ) : (
             <div
               className={`${style.after_chat__person} ${style.after_chat__person__third} ${style.after_chat__person__sixth}`}
             >
-              <div className={style.after_chat__message}>
+              <div
+                className={`${style.after_chat__message} ${style.after_chat__message__6}`}
+              >
                 <p>{t("afterChat7Text")}</p>
               </div>
 

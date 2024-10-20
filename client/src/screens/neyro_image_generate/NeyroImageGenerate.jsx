@@ -88,6 +88,7 @@ const NeyroImageGenerate = () => {
             <div className={style.neyro_image_generate__banner}>
               <Banner />
             </div>
+
             <p>{t("uploadImageWaiting")}</p>
           </div>
         </div>

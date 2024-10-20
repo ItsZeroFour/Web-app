@@ -47,7 +47,8 @@ const Banner = () => {
             {text}
           </h2>
           <p>
-            Warning: trading involves financial risks. <Link to="/">Rules</Link>
+            Warning: trading involves financial risks.{" "}
+            <Link to="https://blog.binomo.com/tradinggame2024/">Rules</Link>
           </p>
         </div>
         <img src={coins} alt="coins" />

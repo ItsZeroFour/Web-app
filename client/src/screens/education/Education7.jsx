@@ -30,7 +30,7 @@ const Education7 = () => {
             </div>
 
             <div className={style.educatio7__balance__currency}>
-              <p>EUR/USD</p>
+              <p>USD/EUR</p>
             </div>
           </div>
 
