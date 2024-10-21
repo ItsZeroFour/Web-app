@@ -25,6 +25,7 @@ import Education5 from "./screens/education/Education5";
 import Education6 from "./screens/education/Education6";
 import EducationGraphickThird from "./screens/education/EducationGraphichThird";
 import GroupChat from "./screens/group_chat/GroupChat";
+import Education8 from "./screens/education/Education8";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
               <Route path="/education-5" element={<Education5 />} />
               <Route path="/education-6" element={<Education6 />} />
               <Route path="/education-7" element={<Education7 />} />
+              <Route path="/education-8" element={<Education8 />} />
               <Route
                 path="/education-graphick-up"
                 element={<EducationGraphickUp />}

@@ -21,7 +21,7 @@ const GameStart = () => {
 
           <div className={style.game_start__buttons}>
             <Link to="/upload-image">{t("gameStartButton1")}</Link>
-            <Link to="/">{t("gameStartButton2")}</Link>
+            <Link to="/final">{t("gameStartButton2")}</Link>
           </div>
         </div>
       </div>

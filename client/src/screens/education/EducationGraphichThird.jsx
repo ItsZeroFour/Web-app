@@ -19,11 +19,11 @@ const EducationGraphickThird = () => {
   useEffect(() => {
     const changeText = setTimeout(() => {
       setText(t("educationGraphickThird"));
-    }, 4500);
+    }, 13000);
 
     const showButton = setTimeout(() => {
       setShowButton(true);
-    }, 5000);
+    }, 13000);
 
     return () => {
       clearTimeout(changeText);
@@ -55,53 +55,28 @@ const EducationGraphickThird = () => {
     <section className={style.education}>
       <div className="container">
         <div className={`wrapper ${style.education__wrapper}`}>
-          {showNot ? (
-            <motion.div
-              className={style.season_pass__notification}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              variants={fadeVariants}
-              transition={fadeTransition}
+          {text ? (
+            <div
+              className={`${style.education__person} ${style.education__person_2} ${style.education__person_graphick}`}
             >
-              <motion.div
-                className={style.season_pass__bank}
-                initial="hidden"
-                animate="visible"
-                variants={notificationVariants}
-                transition={transition}
-              >
-                <img src={bank} alt="bank" />
-
-                <div className={style.season_pass__notification__text}>
-                  <div>
-                    <h3>Bank</h3>
-                    <p>{`${new Date().getHours()}:${new Date().getMinutes()}`}</p>
-                  </div>
-
-                  <p>{t("bankNot")} 11241₹</p>
-                </div>
-              </motion.div>
-            </motion.div>
-          ) : (
-            <>
-              <div
-                className={`${style.education__person} ${style.education__person_2} ${style.education__person_graphick}`}
-              >
-                <img src={text ? person : person2} alt="person" />
-
-                <div>
-                  <h3>{t("education1Name")}</h3>
-                  <p>{text ? text : t("education7Text")}</p>
-                </div>
+              <img src={person2} alt="person" />
+              <div>
+                <h3>{t("education1Name")}</h3>
+                <p>{t("educationGraphickThirdText")}</p>
               </div>
-            </>
+            </div>
+          ) : (
+            <div
+              className={`${style.education__person} ${style.education__person_2} ${style.education__person_graphick}`}
+            >
+              <h1>Next few days…</h1>
+            </div>
           )}
 
           <div className={style.educatio7__balance}>
             <div className={style.educatio7__balance__demo}>
               <p>{t("education7Demo")}</p>
-              <h1>9900₹</h1>
+              <h1>{text ? "55800" : "9900"}₹</h1>
             </div>
 
             <div className={style.educatio7__balance__currency}>
@@ -120,18 +95,7 @@ const EducationGraphickThird = () => {
             style={{ height: 60, width: "100%" }}
             className={style.educatio__graphick__buttons__wrapper}
           >
-            {showButton && !showNot && (
-              <motion.div
-                className={style.educatio_graphick__buttons}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-              >
-                <button onClick={() => setShowNot(true)}>+150 ₹</button>
-              </motion.div>
-            )}
-
-            {showNot && (
+            {showButton && (
               <motion.div
                 className={style.educatio_graphick__buttons}
                 initial={{ opacity: 0 }}

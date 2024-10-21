@@ -82,7 +82,7 @@
   img {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 160px;
     object-fit: contain;
     left: -35%;
     top: 0%;
@@ -323,6 +323,8 @@
 }
 
 .educatio__graphick__buttons__wrapper {
+  height: 65px !important;
+
   @media (max-width: 450px) {
     margin-bottom: 90px;
   }
@@ -337,6 +339,16 @@
 
 .education__person_graphick {
   width: 90%;
+}
+
+.education__person_graphick {
+  height: 15vh !important;
+  h1 {
+    color: var(--color-white);
+    padding: 10px;
+    font-size: 28px;
+    width: 50%;
+  }
 }
 
 .education4__images {

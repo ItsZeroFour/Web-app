@@ -88,10 +88,12 @@
   "education7Ok": "Ok",
   "educationGraphickText": "No, you're wrong. I still advise you to go through a simple training first.",
 
+
   "educationGraphickUp": "We just read the news that the dollar will rise. Better click \"Down\".",
   "educationGraphickDown": "We just read the news that the dollar will rise. Better click \"Up\".",
   "educationGraphickThird": "We just read the news that the dollar will rise.",
-  "educationGraphickButton": "Ask Devlan and sister",
+  "educationGraphickThirdText": "Great! Now you can buy an IPL season pass!",
+  "educationGraphickButton": "Text friends",
 
   "groupTitle": "Sister and Devlan's group",
   "groupMessage1": "Guys, I've earned money on trading! @Sister, now I can buy IPL pass for us!",

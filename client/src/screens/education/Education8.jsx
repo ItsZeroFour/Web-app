@@ -1,11 +1,11 @@
 import React from "react";
 import style from "./style.module.scss";
-import person from "../../assets/images/after-chat-6.png";
+import person from "../../assets/images/after-chat-4.png";
 import { useTranslation } from "react-i18next";
 import graphick from "../../assets/images/graphick.svg";
 import { Link } from "react-router-dom";
 
-const Education6 = () => {
+const Education8 = () => {
   const { t } = useTranslation();
 
   return (
@@ -19,7 +19,7 @@ const Education6 = () => {
 
             <div>
               <h3>{t("education1Name")}</h3>
-              <p>{t("education7Text")}</p>
+              <p>{t("educationGraphickThird")}</p>
             </div>
           </div>
 
@@ -50,4 +50,4 @@ const Education6 = () => {
   );
 };
 
-export default Education6;
+export default Education8;

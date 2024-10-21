@@ -89,7 +89,7 @@ const FriendChat = () => {
           }
           return [...prev, messages[index]];
         });
-      }, (index + 1) * 2500)
+      }, (index + 1) * 3000)
     );
 
     return () => timers.forEach((timer) => clearTimeout(timer));
@@ -98,7 +98,7 @@ const FriendChat = () => {
   useEffect(() => {
     const linkTimer = setTimeout(() => {
       setShowLink(true);
-    }, 11000); // Показываем кнопки после появления 4-го сообщения
+    }, 13000); // Показываем кнопки после появления 4-го сообщения
 
     return () => {
       clearTimeout(linkTimer);
