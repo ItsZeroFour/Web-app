@@ -23,6 +23,12 @@ const preloadImages = (sources) => {
   });
 };
 
+const handleLeadTracking = () => {
+  if (window.fbq !== undefined) {
+    window.fbq("track", "CompleteRegistration");
+  }
+};
+
 const AfterChat = () => {
   const [searchParams] = useSearchParams();
   const [showScreenIndex, setShowScreenIndex] = useState(0);
@@ -181,7 +187,10 @@ const AfterChat = () => {
             >
               <h2>
                 {t("afterChat6Title")}{" "}
-                <Link to="https://binomo.com/auth?a=bfbfde47c861&ac=trading_game&utm_source=trading_game&utm_medium=trading_game&utm_campaign=trading_game#SignUp">
+                <Link
+                  onClick={() => handleLeadTracking()}
+                  to="https://binomo.com/auth?a=bfbfde47c861&ac=trading_game&utm_source=trading_game&utm_medium=trading_game&utm_campaign=trading_game#SignUp"
+                >
                   Binomo.com
                 </Link>
               </h2>
@@ -194,6 +203,7 @@ const AfterChat = () => {
 
               <div className={style.after_chat__links}>
                 <Link
+                  onClick={() => handleLeadTracking()}
                   to="https://binomo.com/auth?a=bfbfde47c861&ac=trading_game&utm_source=trading_game&utm_medium=trading_game&utm_campaign=trading_game#SignUp"
                   target="_blank"
                 >
@@ -205,7 +215,10 @@ const AfterChat = () => {
                   </button>
                 )}
 
-                <Link to="https://blog.binomo.com/tradinggame2024/">
+                <Link
+                  onClick={() => handleLeadTracking()}
+                  to="https://blog.binomo.com/tradinggame2024/"
+                >
                   {t("afterChat6Button3")}
                 </Link>
               </div>

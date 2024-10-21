@@ -80,6 +80,12 @@ const NeyroImageGenerate = () => {
     }
   }, [aiImageGeneratedName]);
 
+  useEffect(() => {
+    if (window.fbq !== undefined) {
+      window.fbq("track", "ViewContent");
+    }
+  }, []);
+
   return (
     <section className={style.neyro_image_generate}>
       <div className="container">

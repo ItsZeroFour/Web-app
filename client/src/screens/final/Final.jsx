@@ -8,6 +8,12 @@ import { useTranslation } from "react-i18next";
 const Final = () => {
   const { t } = useTranslation();
 
+  const handleLeadTracking = () => {
+    if (window.fbq !== undefined) {
+      window.fbq("track", "CompleteRegistration");
+    }
+  };
+
   return (
     <section className={style.final}>
       <div className="container">
@@ -17,6 +23,7 @@ const Final = () => {
             <p>
               {t("finalTextPart1")}{" "}
               <Link
+                onClick={() => handleLeadTracking()}
                 to="https://blog.binomo.com/tradinggame2024/"
                 target="_blank"
               >
@@ -53,7 +60,10 @@ const Final = () => {
 
             <img src={manImg} alt="man" />
 
-            <Link to="https://binomo.com/auth?a=bfbfde47c861&ac=trading_game&utm_source=trading_game&utm_medium=trading_game&utm_campaign=trading_game#SignUp ">
+            <Link
+              onClick={() => handleLeadTracking()}
+              to="https://binomo.com/auth?a=bfbfde47c861&ac=trading_game&utm_source=trading_game&utm_medium=trading_game&utm_campaign=trading_game#SignUp "
+            >
               {t("finalButton")}
             </Link>
           </div>

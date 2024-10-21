@@ -14,9 +14,20 @@ const Banner = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const handleLeadTracking = () => {
+    if (window.fbq !== undefined) {
+      window.fbq("track", "Lead");
+    }
+  };
+
   return (
     <div className={style.banner}>
-      <Link to="/after-chat?index=5" target="_blank" rel="noreferrer">
+      <Link
+        onClick={() => handleLeadTracking()}
+        to="/after-chat?index=5"
+        target="_blank"
+        rel="noreferrer"
+      >
         <img src={gifs} alt="gifs" />
         <div className={style.banner__text}>
           <h2>
