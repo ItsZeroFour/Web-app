@@ -90,6 +90,14 @@
   }
 }
 
+.final__content > p {
+  color: var(--color-light-black);
+
+  a {
+    text-decoration: underline;
+  }
+}
+
 .final__content > img {
   position: absolute;
   top: 100%;

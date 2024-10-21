@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./style.module.scss";
-import manImg from "../../assets/images/start_man.png";
+import manImg from "../../assets/images/after_chat.png";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
@@ -37,12 +37,6 @@ const Starter = () => {
                 fill="#353535"
               />
             </svg>
-
-            <div className={style.starter__head__menu}>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
           </div>
 
           <h1>Binomo trading game</h1>

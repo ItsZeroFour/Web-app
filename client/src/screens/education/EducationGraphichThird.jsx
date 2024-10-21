@@ -66,10 +66,9 @@ const EducationGraphickThird = () => {
               </div>
             </div>
           ) : (
-            <div
-              className={`${style.education__person} ${style.education__person_2} ${style.education__person_graphick}`}
-            >
-              <h1>Next few days…</h1>
+            <div className={style.education__graphick__waiting}>
+              <h1 style={{ fontSize: 52 }}>Nеxt few days...</h1>
+              <p>🗓️</p>
             </div>
           )}
 

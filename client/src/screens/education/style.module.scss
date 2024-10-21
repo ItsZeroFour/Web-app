@@ -126,12 +126,6 @@
 }
 
 .education__person__1 {
-  img {
-    // @media (min-height: 800px) and (min-width: 450px) {
-    //   height: 100px;
-    // }
-  }
-
   div {
     @media (min-height: 800px) and (min-width: 450px) {
       margin-left: 100px;
@@ -228,6 +222,30 @@
 
   @media (max-width: 450px) {
     width: 90%;
+  }
+}
+
+.education__graphick__waiting {
+  text-align: center;
+  color: var(--color-white);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 10px;
+
+  h1 {
+    font-weight: 48px;
+    font-family: "Nunito-sans-bd", sans-serif;
+    font-weight: 700;
+    width: 70%;
+    line-height: 100%;
+  }
+
+  p {
+    font-size: 96px;
   }
 }
 
@@ -367,12 +385,6 @@
 
 .education__person_graphick {
   height: 15vh !important;
-  h1 {
-    color: var(--color-white);
-    padding: 10px;
-    font-size: 28px;
-    width: 50%;
-  }
 }
 
 .education4__images {

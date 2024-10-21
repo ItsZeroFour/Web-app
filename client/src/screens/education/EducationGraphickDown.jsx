@@ -29,6 +29,10 @@ const EducationGraphickUp = () => {
     };
   }, []);
 
+  useEffect(() => {
+    window.localStorage.setItem("firstGraphick", true);
+  }, []);
+
   return (
     <section className={style.education}>
       <div className="container">

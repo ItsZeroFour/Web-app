@@ -112,7 +112,7 @@ const ImageGenerated = () => {
           ""
         )}/aiGet/${aiImageName}`
       );
-      alert("El enlace se ha copiado correctamente");
+      alert(t("copyNotification"));
     } catch (error) {
       console.error("Error al copiar un enlace");
     }

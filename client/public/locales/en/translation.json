@@ -78,7 +78,7 @@
   "education4Text": "Follow the news that is written on this topic. Click on the appropriate news on this screen.",
   "educationButton1": "Help me to choose",
 
-  "education5Text": "This news clearly indicates that the dollar will rise. Now you can go to Binomo and try trading.",
+  "education5Text": "This news indicates that the dollar will rise. Now you can go to Binomo and try trading.",
   "education5Button": "Let's try!",
 
   "education7Text": "Now you can trade on your own!",
@@ -126,5 +126,15 @@
 
   "gameFinalTitle": "share on social networks",
   "gameDownload": "Download",
-  "gameCopy": "Copy"
+  "gameCopy": "Copy",
+
+  "finalTitle": "Start your way with our promocodes",
+  "finalTextPart1": "The list of winners will be published on 26 November.",
+  "finalTextPart2": "of participation in the contest.",
+  "finalTextLink": "Rules",
+  "finalText2": "TAKE A CHANCE TO WIN REAL MONEY",
+  "finalText3": "Enter the promo code and get 100% of the deposit",
+  "finalButton": "Go to Binomo",
+
+  "copyNotification": "Successfully copied to clipboard"
 }

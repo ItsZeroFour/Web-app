@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import style from "./style.module.scss";
 import person from "../../assets/images/after-chat-6.png";
 import { useTranslation } from "react-i18next";
@@ -6,7 +6,12 @@ import graphick from "../../assets/images/graphick.svg";
 import { Link } from "react-router-dom";
 
 const Education6 = () => {
+  const [isFirstGraphick, setIsFirstGraphick] = useState(false);
   const { t } = useTranslation();
+
+  useEffect(() => {
+    setIsFirstGraphick(window.localStorage.getItem("firstGraphick"));
+  }, [window.localStorage.getItem("firstGraphick")]);
 
   return (
     <section className={style.education}>
@@ -26,7 +31,7 @@ const Education6 = () => {
           <div className={style.educatio7__balance}>
             <div className={style.educatio7__balance__demo}>
               <p>{t("education7Demo")}</p>
-              <h1>9900₹</h1>
+              <h1>{isFirstGraphick ? 9900 : 10000}₹</h1>
             </div>
 
             <div className={style.educatio7__balance__currency}>
@@ -47,7 +52,12 @@ const Education6 = () => {
           </div> */}
 
           <div className={style.educatio12__buttons}>
-            <Link to="/education-graphick-third">Trade</Link>
+            <Link
+              onClick={() => window.localStorage.removeItem("firstGraphick")}
+              to="/education-graphick-third"
+            >
+              Trade
+            </Link>
           </div>
         </div>
       </div>

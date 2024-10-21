@@ -59,12 +59,6 @@ const AfterChat = () => {
           {showScreenIndex !== 4 && (
             <div className={style.after_chat__header}>
               <img src={logo} alt="logo" />
-
-              <div className={style.after_chat__menu}>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
             </div>
           )}
 
@@ -186,7 +180,10 @@ const AfterChat = () => {
               className={`${style.after_chat__person} ${style.after_chat__person__second} ${style.after_chat__person__fifth}`}
             >
               <h2>
-                {t("afterChat6Title")} <Link to="binomo.com">Binomo.com</Link>
+                {t("afterChat6Title")}{" "}
+                <Link to="https://binomo.com/auth?a=bfbfde47c861&ac=trading_game&utm_source=trading_game&utm_medium=trading_game&utm_campaign=trading_game#SignUp">
+                  Binomo.com
+                </Link>
               </h2>
 
               <div className={style.after_chat__promo}>
