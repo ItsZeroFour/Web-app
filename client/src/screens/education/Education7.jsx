@@ -19,7 +19,7 @@ const Education7 = () => {
 
             <div>
               <h3>{t("education1Name")}</h3>
-              <p>{t("education7Text")}</p>
+              <p>{t("educationGraphickFirstText")}</p>
             </div>
           </div>
 

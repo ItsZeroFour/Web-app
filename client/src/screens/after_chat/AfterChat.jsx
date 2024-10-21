@@ -16,6 +16,13 @@ import tabImg from "../../assets/images/Tab.png";
 import { Link, useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
+const preloadImages = (sources) => {
+  sources.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+};
+
 const AfterChat = () => {
   const [searchParams] = useSearchParams();
   const [showScreenIndex, setShowScreenIndex] = useState(0);
@@ -26,6 +33,24 @@ const AfterChat = () => {
       setShowScreenIndex(+searchParams.get("index"));
     }
   }, [searchParams.get("index")]);
+
+  useEffect(() => {
+    preloadImages([
+      logo,
+      afterChatImg,
+      afterChatPerson1,
+      afterChatPerson2,
+      afterChatPerson3,
+      afterChatPerson4,
+      afterChatPerson5,
+      popularItem1,
+      popularItem2,
+      popularItem3,
+      popularItem4,
+      popularItemQr,
+      tabImg,
+    ]);
+  }, []);
 
   return (
     <section className={style.after_chat}>

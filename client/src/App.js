@@ -16,7 +16,7 @@ import AfterChat from "./screens/after_chat/AfterChat";
 import Education1 from "./screens/education/Education1";
 import Education2 from "./screens/education/Education2";
 import Education3 from "./screens/education/Education3";
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import Education7 from "./screens/education/Education7";
 import EducationGraphickUp from "./screens/education/EducationGraphickUp";
 import EducationGraphickDown from "./screens/education/EducationGraphickDown";
@@ -26,8 +26,32 @@ import Education6 from "./screens/education/Education6";
 import EducationGraphickThird from "./screens/education/EducationGraphichThird";
 import GroupChat from "./screens/group_chat/GroupChat";
 import Education8 from "./screens/education/Education8";
+import afterChat1 from "./assets/images/after-chat-1.png";
+import afterChat2 from "./assets/images/after-chat-2.png";
+import afterChat3 from "./assets/images/after-chat-3.png";
+import afterChat4 from "./assets/images/after-chat-4.png";
+import afterChat5 from "./assets/images/after-chat-5.png";
+import afterChat6 from "./assets/images/after-chat-6.png";
+
+function preloadImages(images) {
+  images.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+}
 
 function App() {
+  useEffect(() => {
+    preloadImages([
+      afterChat1,
+      afterChat2,
+      afterChat3,
+      afterChat4,
+      afterChat5,
+      afterChat6,
+    ]);
+  }, []);
+
   return (
     <div className="App">
       <Suspense fallback={() => <p>Loading...</p>}>
