@@ -33,18 +33,23 @@ const EducationGraphickUp = () => {
     <section className={style.education}>
       <div className="container">
         <div className={`wrapper ${style.education__wrapper}`}>
-          <div
-            className={`${style.education__person} ${style.education__person_2} ${style.education__person_graphick}`}
-          >
-            <img src={text ? person : person2} alt="person" />
+          {text && (
+            <div
+              className={`${style.education__person} ${style.education__person_2} ${style.education__person_graphick}`}
+            >
+              <img src={text ? person : person2} alt="person" />
 
-            <div>
-              <h3>{t("education1Name")}</h3>
-              <p>{text ? text : t("education7Text")}</p>
+              <div>
+                <h3>{t("education1Name")}</h3>
+                <p>{t("educationGraphickFirstTextFirst")}</p>
+              </div>
             </div>
-          </div>
+          )}
 
-          <div className={style.educatio7__balance}>
+          <div
+            className={style.educatio7__balance}
+            style={text ? { marginTop: 0 } : { marginTop: 20 }}
+          >
             <div className={style.educatio7__balance__demo}>
               <p>{t("education7Demo")}</p>
               <h1>9900₹</h1>

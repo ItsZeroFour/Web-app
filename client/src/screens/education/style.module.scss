@@ -27,10 +27,13 @@
     width: 70%;
     text-align: center;
     border-radius: 30px;
-    margin-bottom: 60px;
 
     @media (max-height: 525px) {
       padding: 6px;
+    }
+
+    @media (max-width: 450px) {
+      margin-bottom: 60px;
     }
   }
 }
@@ -86,6 +89,7 @@
     width: 60%;
     margin-left: 130px;
     padding: 10px;
+    margin-top: 3px;
     color: var(--color-white);
     opacity: 0.85;
 
@@ -95,7 +99,6 @@
 
     p {
       font-size: 12px;
-      margin-top: 10px;
 
       @media (max-height: 525px) {
         margin-top: 5px;
@@ -110,6 +113,15 @@
 
   @media (max-width: 450px) {
     width: 90%;
+  }
+}
+
+.education__person_3 {
+  height: 200px !important;
+
+  @media (max-height: 670px) {
+    height: 100%;
+    margin-top: 0 !important;
   }
 }
 
@@ -200,8 +212,12 @@
       height: auto;
     }
 
-    @media (max-height: 605px) {
+    @media (max-height: 640px) {
       height: 85px;
+    }
+
+    @media (max-height: 625px) {
+      height: 80px;
     }
   }
 

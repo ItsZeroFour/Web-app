@@ -91,7 +91,7 @@ const Education2 = () => {
           </ul>
 
           <div
-            className={`${style.education__person} ${style.education__person_2}`}
+            className={`${style.education__person} ${style.education__person_2} ${style.education__person_3}`}
           >
             <img src={person} alt="person" />
 
