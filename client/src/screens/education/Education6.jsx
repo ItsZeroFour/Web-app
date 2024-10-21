@@ -40,9 +40,14 @@ const Education6 = () => {
             alt="graphich"
           />
 
-          <div className={style.educatio7__buttons}>
+          {/* !!!!!!!!!!!!!!!!!!!!!! */}
+          {/* <div className={style.educatio7__buttons}>
             <Link to="/education-8">{t("education7Down")}</Link>
             <Link to="/education-graphick-third">{t("education7Up")}</Link>
+          </div> */}
+
+          <div className={style.educatio12__buttons}>
+            <Link to="/education-graphick-third">Trade</Link>
           </div>
         </div>
       </div>
