@@ -61,12 +61,6 @@
   }
 }
 
-.education__person__1 {
-  @media (max-height: 800px) {
-    width: 80% !important;
-  }
-}
-
 .education__person {
   display: flex;
   justify-content: space-between;
@@ -100,7 +94,7 @@
     }
 
     p {
-      font-size: 14px;
+      font-size: 12px;
       margin-top: 10px;
 
       @media (max-height: 525px) {
@@ -116,6 +110,20 @@
 
   @media (max-width: 450px) {
     width: 90%;
+  }
+}
+
+.education__person__1 {
+  img {
+    @media (min-height: 800px) and (min-width: 450px) {
+      height: 100px;
+    }
+  }
+
+  div {
+    @media (min-height: 800px) and (min-width: 450px) {
+      margin-left: 100px;
+    }
   }
 }
 
