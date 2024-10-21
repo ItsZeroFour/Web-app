@@ -14,13 +14,9 @@ const Banner = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const navigateToConversionPage = () => {
-    return window.open("/after-chat?index=5", "_blank", "noopener, noreferrer");
-  };
-
   return (
     <div className={style.banner}>
-      <Link to="" onClick={() => navigateToConversionPage()}>
+      <Link to="/after-chat?index=5" target="_blank" rel="noreferrer">
         <img src={gifs} alt="gifs" />
         <div className={style.banner__text}>
           <h2>
@@ -52,7 +48,13 @@ const Banner = () => {
           </h2>
           <p>
             Warning: trading involves financial risks.{" "}
-            <Link to="https://blog.binomo.com/tradinggame2024/">Rules</Link>
+            <Link
+              to="https://blog.binomo.com/tradinggame2024/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Rules
+            </Link>
           </p>
         </div>
         <img src={coins} alt="coins" />
