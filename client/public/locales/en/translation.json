@@ -88,7 +88,6 @@
   "education7Ok": "Ok",
   "educationGraphickText": "No, you're wrong. I still advise you to go through a simple training first.",
 
-
   "educationGraphickUp": "We just read the news that the dollar will rise. Better click \"Down\".",
   "educationGraphickDown": "We just read the news that the dollar will rise. Better click \"Up\".",
   "educationGraphickThird": "We just read the news that the dollar will rise.",
@@ -120,5 +119,9 @@
 
   "gameStartText": "Great! Now let's make a photo together",
   "gameStartButton1": "Let`s go",
-  "gameStartButton2": "No, thanks"
+  "gameStartButton2": "No, thanks",
+
+  "gameFinalTitle": "share on social networks",
+  "gameDownload": "Download",
+  "gameCopy": "Copy"
 }

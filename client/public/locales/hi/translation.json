@@ -119,5 +119,9 @@
 
   "gameStartText": "महान! आइए अब मिलकर एक फोटो बनाएं",
   "gameStartButton1": "चलो चलें",
-  "gameStartButton2": "जी नहीं, धन्यवाद"
+  "gameStartButton2": "जी नहीं, धन्यवाद",
+
+  "gameFinalTitle": "सामाजिक नेटवर्क पर साझा करें",
+  "gameDownload": "डाउनलोड",
+  "gameCopy": "कापी"
 }
