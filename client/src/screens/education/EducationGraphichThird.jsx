@@ -73,16 +73,18 @@ const EducationGraphickThird = () => {
             </div>
           )}
 
-          <div className={style.educatio7__balance}>
-            <div className={style.educatio7__balance__demo}>
-              <p>{t("education7Demo")}</p>
-              <h1>{text ? "55800" : "9900"}₹</h1>
-            </div>
+          {text && (
+            <div className={style.educatio7__balance}>
+              <div className={style.educatio7__balance__demo}>
+                <p>{t("education7Demo")}</p>
+                <h1>{text ? "55800" : "9900"}₹</h1>
+              </div>
 
-            <div className={style.educatio7__balance__currency}>
-              <p>USD/EUR</p>
+              <div className={style.educatio7__balance__currency}>
+                <p>USD/EUR</p>
+              </div>
             </div>
-          </div>
+          )}
 
           <Lottie
             animationData={graphick}

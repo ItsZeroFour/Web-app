@@ -14,9 +14,13 @@ const Banner = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const navigateToConversionPage = () => {
+    return window.open("/after-chat?index=5", "_blank", "noopener, noreferrer");
+  };
+
   return (
     <div className={style.banner}>
-      <Link to="/123">
+      <Link to="" onClick={() => navigateToConversionPage()}>
         <img src={gifs} alt="gifs" />
         <div className={style.banner__text}>
           <h2>

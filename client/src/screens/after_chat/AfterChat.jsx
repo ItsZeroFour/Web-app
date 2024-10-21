@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from "./style.module.scss";
 import logo from "../../assets/images/logo_2.svg";
 import afterChatImg from "../../assets/images/after_chat.png";
@@ -13,12 +13,19 @@ import popularItem3 from "../../assets/images/popular/item3.png";
 import popularItem4 from "../../assets/images/popular/item4.png";
 import popularItemQr from "../../assets/images/popular/qr.png";
 import tabImg from "../../assets/images/Tab.png";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const AfterChat = () => {
+  const [searchParams] = useSearchParams();
   const [showScreenIndex, setShowScreenIndex] = useState(0);
   const { t } = useTranslation();
+
+  useEffect(() => {
+    if (+searchParams.get("index")) {
+      setShowScreenIndex(+searchParams.get("index"));
+    }
+  }, [searchParams.get("index")]);
 
   return (
     <section className={style.after_chat}>
@@ -170,11 +177,13 @@ const AfterChat = () => {
                 >
                   {t("afterChat6Button2")}
                 </Link>
-                <button onClick={() => setShowScreenIndex(6)}>
-                  {t("afterChat6Button1")}
-                </button>
+                {!+searchParams.get("index") && (
+                  <button onClick={() => setShowScreenIndex(6)}>
+                    {t("afterChat6Button1")}
+                  </button>
+                )}
+
                 <Link to="https://blog.binomo.com/tradinggame2024/">
-                  {" "}
                   {t("afterChat6Button3")}
                 </Link>
               </div>
