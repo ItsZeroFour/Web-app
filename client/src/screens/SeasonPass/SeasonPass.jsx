@@ -100,7 +100,16 @@ const SeasonPass = () => {
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <Link to="/call-friend">{t("bankButton")}</Link>
+                  <Link
+                    onClick={() => {
+                      if (window.ym) {
+                        window.ym(98661745, "reachGoal", "advice");
+                      }
+                    }}
+                    to="/call-friend"
+                  >
+                    {t("bankButton")}
+                  </Link>
                 </motion.div>
               )}
             </motion.div>

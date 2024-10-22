@@ -12,6 +12,10 @@ const Final = () => {
     if (window.fbq !== undefined) {
       window.fbq("track", "CompleteRegistration");
     }
+
+    if (window.ym) {
+      window.ym(98661745, "reachGoal", "binomial_start");
+    }
   };
 
   return (

@@ -52,6 +52,10 @@ const Starter = () => {
               onClick={() => {
                 changeLanguage("en");
                 navigate("/main");
+
+                if (window.ym) {
+                  window.ym(98661745, "reachGoal", "eng");
+                }
               }}
             >
               English
@@ -60,6 +64,10 @@ const Starter = () => {
               onClick={() => {
                 changeLanguage("hi");
                 navigate("/main");
+
+                if (window.ym) {
+                  window.ym(98661745, "reachGoal", "hindi");
+                }
               }}
             >
               हिंदी

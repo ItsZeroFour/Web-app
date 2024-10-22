@@ -123,8 +123,14 @@ const FirstChat = () => {
               transition={{ duration: 0.5 }}
             >
               <Link
+                onClick={() => {
+                  if (window.ym) {
+                    window.ym(98661745,'reachGoal','sister')
+                  }
+                }}
                 to="/season-pass"
                 className={`${style.fadeInLink} ${showLink && style.show}`}
+                
               >
                 {t("goToSiteButton")}
               </Link>

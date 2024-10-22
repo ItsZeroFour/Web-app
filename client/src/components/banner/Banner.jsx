@@ -23,7 +23,12 @@ const Banner = () => {
   return (
     <div className={style.banner}>
       <Link
-        onClick={() => handleLeadTracking()}
+        onClick={() => {
+          handleLeadTracking();
+          if (window.ym) {
+            window.ym(98661745, "reachGoal", "200");
+          }
+        }}
         to="/after-chat?index=5"
         target="_blank"
         rel="noreferrer"
@@ -60,6 +65,15 @@ const Banner = () => {
           <p>
             Warning: trading involves financial risks.{" "}
             <Link
+              onClick={() => {
+                if (window.ym) {
+                  window.ym(98661745, "reachGoal", "binomial_start");
+                }
+
+                if (window.fbq !== undefined) {
+                  window.fbq("track", "CompleteRegistration");
+                }
+              }}
               to="https://blog.binomo.com/tradinggame2024/"
               target="_blank"
               rel="noreferrer"

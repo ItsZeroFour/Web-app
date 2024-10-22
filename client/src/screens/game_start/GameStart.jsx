@@ -20,7 +20,16 @@ const GameStart = () => {
           </div>
 
           <div className={style.game_start__buttons}>
-            <Link to="/upload-image">{t("gameStartButton1")}</Link>
+            <Link
+              onClick={() => {
+                if (window.ym) {
+                  window.ym(98661745, "reachGoal", "shami");
+                }
+              }}
+              to="/upload-image"
+            >
+              {t("gameStartButton1")}
+            </Link>
             <Link to="/final">{t("gameStartButton2")}</Link>
           </div>
         </div>
