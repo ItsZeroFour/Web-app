@@ -24,43 +24,6 @@ const Final = () => {
         <div className={`wrapper ${style.final__wrapper}`}>
           <div className={style.final__content}>
             <h1>{t("finalTitle")}</h1>
-            <p>
-              {t("finalTextPart1")}{" "}
-              <Link
-                onClick={() => handleLeadTracking()}
-                to="https://blog.binomo.com/tradinggame2024/"
-                target="_blank"
-              >
-                {t("finalTextLink")}
-              </Link>{" "}
-              {t("finalTextPart2")}
-            </p>
-
-            <div className={style.final__promo}>
-              <Link
-                to="#"
-                onClick={() => {
-                  navigator.clipboard.writeText("GAME1000");
-                  alert(t("copyNotification"));
-                }}
-              >
-                GAME1000 <img src={arrowImage} alt="arrow" />
-              </Link>
-
-              <p>{t("finalText2")}</p>
-
-              <Link
-                to="#"
-                onClick={() => {
-                  navigator.clipboard.writeText("TRADINGGAME");
-                  alert(t("copyNotification"));
-                }}
-              >
-                TRADINGGAME <img src={arrowImage} alt="arrow" />
-              </Link>
-
-              <p>{t("finalText3")}</p>
-            </div>
 
             <img src={manImg} alt="man" />
 

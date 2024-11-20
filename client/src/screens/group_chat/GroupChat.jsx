@@ -131,7 +131,7 @@ const GroupChat = () => {
               transition={{ duration: 0.5 }}
             >
               <Link
-                to="/game-start"
+                to="/final"
                 className={`${style.fadeInLink} ${showLink && style.show}`}
               >
                 {t("groupButton")}

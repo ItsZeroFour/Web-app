@@ -40,10 +40,10 @@ const Starter = () => {
           </div>
 
           <h1>Binomo trading game</h1>
-          <p>
+          {/* <p>
             Complete our game, take a photo with Mohammed Shami and get a chance
             to win $200!
-          </p>
+          </p> */}
 
           <img src={manImg} alt="manImg" />
 

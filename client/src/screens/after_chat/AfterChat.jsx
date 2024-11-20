@@ -75,7 +75,7 @@ const AfterChat = () => {
           {showScreenIndex === 0 ? (
             <>
               <h1>{t("afterChat1Title")}</h1>
-              <p>{t("afterChat1Text")}</p>
+              {/* <p>{t("afterChat1Text")}</p> */}
 
               <div className={style.after_chat__image}>
                 <img src={afterChatImg} alt="after chat" />
@@ -199,9 +199,9 @@ const AfterChat = () => {
                 </Link>
               </h2>
 
-              <div className={style.after_chat__promo}>
+              {/* <div className={style.after_chat__promo}>
                 <p>{t("afterChat6Text")}</p>
-              </div>
+              </div> */}
 
               <img src={tabImg} alt="after chat 2" />
 
@@ -219,12 +219,12 @@ const AfterChat = () => {
                   </button>
                 )}
 
-                <Link
+                {/* <Link
                   onClick={() => handleLeadTracking()}
                   to="https://blog.binomo.com/tradinggame2024/"
                 >
                   {t("afterChat6Button3")}
-                </Link>
+                </Link> */}
               </div>
             </div>
           ) : (

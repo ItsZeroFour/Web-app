@@ -27,19 +27,19 @@
   "friendButton3": "See the platform",
 
   "afterChat1Title": "Don't give up, and you can again",
-  "afterChat1Text": "Become successful on Binomo like Mohammed Shami in cricket",
+  "afterChat1Text": "Become successful on Binomo like Mr. Blumberg in cricket",
   "afterChat1Button": "Next",
 
-  "afterChat2Text": "Hey! Nice to meet you!",
-  "afterChat2Button": "Wow, Mohammed Shami!",
+  "afterChat2Text": "Hey! Nice to meet you! My name is Mr. Blumberg, I am an investor!  I’m glad to tell you about Binomo!",
+  "afterChat2Button": "Wow, thanks!",
 
-  "afterChat3Text": "We are on Binomo website! Binomo is a  high-end trading platform with a wide range of financial assets.",
+  "afterChat3Text": "Yes! Trade amount starting from $1so you won't lose a large amount of funds while you're still learning how to trade.",
   "afterChat3Button": "Can I earn money here?",
 
   "afterChat4Text": "Yes! You can open a trade for any amount from 80₹",
   "afterChat4Button": "Can I train before trading?",
 
-  "afterChat5Name": "Mohammed Shami",
+  "afterChat5Name": "Mr. Blumberg",
   "afterChat5Text": "You can top up your balance in different ways and without commission",
   "afterChat5Button": "So I can easily earn here?",
 
@@ -54,7 +54,7 @@
   "afterChaT7Button1": "Let's try right now!",
   "afterChaT7Button2": "Let's start from education!",
 
-  "education1Name": "Mohammed Shami",
+  "education1Name": "Mr. Blumberg",
   "education1Text": "Binomo has many educational lectures that will help you learn how to trade",
   "education1Button": "SOUNDS GOOD",
 
@@ -101,15 +101,15 @@
   "groupMessage1": "Guys, I've earned money on trading! @Sister, now I can buy IPL pass for us!",
   "groupMessage2": "Honey, I'm so glad! You are the best brother in the world!",
   "groupMessage3": "Wow bro you really did it! I'll meet you on cricket match this weekend",
-  "groupButton": "Let's go!",
+  "groupButton": "TRADE RIGHT NOW",
 
-  "uploadImageTitle": "TAKE A PHOTO WITH SHAMI",
+  "uploadImageTitle": "TAKE A PHOTO WITH Mr. Blumberg",
   "uploadImageText": "By checking this box, you confirm that you have read, understood, and agree to be bound by these",
   "uploadImageRules": "Rules of Use",
 
   "uploadImagePhoto": "Take a photo",
   "uploadImageUpload": "Upload an image",
-  "uploadImageNot": "AI will generate photo with you and Mohhamed Shami",
+  "uploadImageNot": "AI will generate photo with you and Mohhamed Mr. Blumberg",
   "uploadCameraButton1": "Try another photo",
   "uploadCameraButton2": "Ok",
   "uploadImageLoading": "Loading....",
@@ -118,7 +118,7 @@
 
   "imageGeneratedButton1": "Share with friends",
   "imageGeneratedButton2": "Try another photo",
-  "imageGeneratedButton3": "Talk with Shami",
+  "imageGeneratedButton3": "Talk with Mr. Blumberg",
 
   "gameStartText": "Great! Now let's make a photo together",
   "gameStartButton1": "Let`s go",
@@ -128,7 +128,7 @@
   "gameDownload": "Download",
   "gameCopy": "Copy",
 
-  "finalTitle": "Start your way with our promocodes",
+  "finalTitle": "Now it’s a time for a real trading!",
   "finalTextPart1": "The list of winners will be published on 26 November.",
   "finalTextPart2": "of participation in the contest.",
   "finalTextLink": "Rules",

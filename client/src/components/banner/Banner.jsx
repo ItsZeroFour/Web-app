@@ -22,7 +22,7 @@ const Banner = () => {
 
   return (
     <div className={style.banner}>
-      <Link
+      {/* <Link
         onClick={() => {
           handleLeadTracking();
           if (window.ym) {
@@ -83,7 +83,7 @@ const Banner = () => {
           </p>
         </div>
         <img src={coins} alt="coins" />
-      </Link>
+      </Link> */}
     </div>
   );
 };
