@@ -29,7 +29,7 @@
       border-radius: 50px;
       font-size: 20px;
       text-align: center;
-      background: var(--color-yellow);
+      background: var(--color-blue);
 
       @media (max-width: 450px) {
         margin-bottom: 115px;
@@ -67,7 +67,7 @@
       width: 45px;
       height: auto;
       object-fit: cover;
-      margin-top: 5px;
+      margin-top: 15px;
     }
   }
 
@@ -75,6 +75,7 @@
     font-size: 16px;
     font-family: "Nunito-md", sans-serif;
     font-weight: 500;
+    color: #161616;
   }
 }
 
@@ -89,7 +90,8 @@
     align-items: start;
 
     .first__chat__message__content {
-      background: #e8e8e8;
+      background: #f3f3f3;
+      color: #161616;
     }
 
     .first__chat__message__avatar {
@@ -123,14 +125,14 @@
     width: 30px;
     height: auto;
     object-fit: cover;
-    margin-top: 5px;
+    margin-top: 12px;
   }
 }
 
 .first__chat__message__content {
   width: 90%;
   padding: 10px 15px;
-  background: var(--color-yellow);
+  background: var(--color-blue);
   border-radius: 10px;
 
   p {

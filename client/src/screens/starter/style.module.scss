@@ -1,7 +1,10 @@
 .starter__wrapper {
-  background: var(--color-yellow);
+  background: var(--color-blue);
+  background-image: url("../../assets/images/start_bg.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-  border: 1px solid rgba(51, 85, 51, 0.333);
   border-radius: 10px;
 
   position: relative;
@@ -53,12 +56,14 @@
 
 .starter__wrapper > p {
   text-align: center;
+  width: 270px;
 }
 
 .starter__wrapper > img {
   position: absolute;
-  top: 36%;
+  top: 30%;
   // right: -85%;
+  width: 100%;
 
   // width: 1200px;
 
@@ -93,8 +98,8 @@
     height: 55px;
     width: 140px;
     padding: 10px;
-    background: var(--color-light-black);
-    color: var(--color-white);
+    background: var(--color-white);
+    color: var(--color-dark);
     border-radius: 40px;
     font-size: 20px;
   }

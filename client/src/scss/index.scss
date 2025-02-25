@@ -28,8 +28,13 @@ body {
   font-family: "Nunito", sans-serif;
   font-weight: 400;
 
-  background: var(--color-yellow);
-  color: var(--color-light-black);
+  background: var(--color-dark);
+  background-image: url("../assets/images/main_bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: var(--color-white);
 
   @media (max-height: 610px) {
     overflow-x: hidden;
@@ -59,8 +64,8 @@ html {
 }
 
 .wrapper {
-  width: 450px;
-  height: 667px;
+  width: 400px;
+  height: 720px;
   // height: calc(667px - env(safe-area-inset-bottom));
   margin: 0 auto;
   overflow: hidden;

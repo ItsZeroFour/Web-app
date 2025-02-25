@@ -1,6 +1,5 @@
 .after_chat__wrapper {
-  background: var(--color-light-black);
-  border: 1px solid rgba(51, 85, 51, 0.333);
+  background: var(--color-white);
   border-radius: 10px;
 
   position: relative;
@@ -16,6 +15,19 @@
     border-radius: 0;
   }
 
+  &::before {
+    content: "";
+    position: absolute;
+    width: 550px;
+    height: 550px;
+    background: var(--color-blue);
+    border-radius: 50%;
+    transform: translateX(-1px);
+    top: -30%;
+  }
+}
+
+.after_chat__content {
   h1 {
     font-size: 40px;
     font-family: "NunitoSand-eb", sans-serif;
@@ -60,17 +72,6 @@
       top: 79%;
     }
   }
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 550px;
-    height: 550px;
-    background: var(--color-yellow);
-    border-radius: 50%;
-    transform: translateX(-1px);
-    top: -30%;
-  }
 }
 
 .after_chat__image {
@@ -98,7 +99,7 @@
     top: 20%;
   }
 
-  @media(max-width: 450px) {
+  @media (max-width: 450px) {
     margin-bottom: 0px;
   }
 
@@ -169,6 +170,14 @@
   img {
     width: 250% !important;
   }
+
+  button {
+    margin-top: 140px !important;
+  }
+
+  .after_chat__message {
+    width: 80%;
+  }
 }
 
 .after_chat__person {
@@ -188,17 +197,34 @@
 
   button {
     margin-top: auto;
+    background: var(--color-blue);
+    color: var(--color-white);
+  }
+}
+
+.after_chat__messages {
+  margin-top: 220px;
+}
+
+.after_chat__person__third {
+  .after_chat__messages {
+    margin-top: 200px;
+    width: 100% !important;
+  }
+
+  button {
+    top: 90%;
   }
 }
 
 .after_chat__message {
   z-index: 2;
-  background: var(--color-white);
+  background: #ececec;
   padding: 10px;
-  margin-top: 160px;
+  margin-top: 30px;
   margin-right: 50px;
   border-radius: 10px;
-  width: fit-content;
+  width: 230px;
   position: relative;
   margin-left: 40px;
 
@@ -213,7 +239,7 @@
     height: 0px;
     border-style: solid;
     border-width: 0 20px 20px 20px;
-    border-color: transparent transparent #ffffff transparent;
+    border-color: transparent transparent #ececec transparent;
     transform: rotate(270deg);
   }
 
@@ -226,12 +252,17 @@
 
 .after_chat__person__third {
   .after_chat__message {
-    width: 80%;
+    width: 60%;
+    margin-top: 200px;
 
     &::before {
       border-width: 0 20px 20px 20px;
-      right: -3%;
+      right: -4%;
     }
+  }
+
+  button {
+    margin-top: 100px !important;
   }
 }
 
@@ -519,5 +550,23 @@
   @media (max-width: 450px) {
     width: 90%;
     margin-top: 20px;
+  }
+}
+
+.after_chat__person__fifth__top {
+  display: flex;
+  background: #f3f3f3;
+  color: #161616;
+
+  img {
+    width: 110px !important;
+    height: 150px;
+    object-fit: contain;
+  }
+
+  .after_chat__person__fifth__top__text {
+    p {
+      text-align: left;
+    }
   }
 }

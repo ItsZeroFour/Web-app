@@ -32,6 +32,7 @@ import afterChat3 from "./assets/images/after-chat-3.png";
 import afterChat4 from "./assets/images/after-chat-4.png";
 import afterChat5 from "./assets/images/after-chat-5.png";
 import afterChat6 from "./assets/images/after-chat-6.png";
+import Payments from "./screens/payments/Payments";
 
 function preloadImages(images) {
   images.forEach((src) => {
@@ -73,6 +74,7 @@ function App() {
               <Route path="/education-6" element={<Education6 />} />
               <Route path="/education-7" element={<Education7 />} />
               <Route path="/education-8" element={<Education8 />} />
+              <Route path="/payments" element={<Payments />} />
               <Route
                 path="/education-graphick-up"
                 element={<EducationGraphickUp />}
