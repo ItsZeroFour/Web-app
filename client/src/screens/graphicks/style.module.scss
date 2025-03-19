@@ -1,0 +1,162 @@
+.graphick__wrapper,
+.graphick_main__wrapper {
+  background: var(--color-white);
+  color: #161616;
+
+  border-radius: 10px;
+  padding-bottom: 10px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 10px;
+  padding: 20px;
+
+  @media (max-width: 450px) {
+    border: none;
+    border-radius: 0;
+    overflow-y: auto;
+  }
+}
+
+.graphick_first__top {
+  display: flex;
+  background: #f3f3f3;
+  color: #161616;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    width: 160px !important;
+    height: auto;
+    top: 5%;
+    left: -5%;
+    object-fit: contain;
+    position: absolute;
+  }
+
+  .graphick_first__top__text {
+    margin-left: 135px;
+    padding: 10px;
+    p {
+      text-align: left;
+      margin-top: 5px;
+    }
+  }
+}
+
+.graphick_first__balance {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  margin-top: 10px;
+
+  & > p {
+    color: #6f6f6f;
+  }
+}
+
+.graphick_first__balance__main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h2 {
+    font-size: 40px;
+    font-family: "Nunito-sans-md", sans-serif;
+    font-weight: 700;
+  }
+
+  div {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #6f6f6f;
+
+    p {
+      color: #6f6f6f;
+    }
+  }
+}
+
+.graphick_first__buttons {
+  margin-top: auto;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+    width: 100%;
+    border-radius: 30px;
+    padding: 10px;
+
+    font-size: 20px;
+    text-align: center;
+
+    &:first-child {
+      background: #ff3b30;
+    }
+
+    &:last-child {
+      background: #34c759;
+    }
+  }
+
+  @media (max-width: 450px) {
+    margin-bottom: 80px;
+  }
+}
+
+.graphick_main__wrapper {
+  h1 {
+    font-size: 56px;
+    font-family: "Nunito-sans-bd", sans-serif;
+    font-weight: 700;
+    line-height: 100%;
+
+    text-align: center;
+
+    span {
+      font-size: 120px;
+      line-height: 140px;
+
+      @media (max-width: 450px) {
+        font-size: 60px;
+        line-height: 80px;
+      }
+    }
+
+    @media (max-width: 450px) {
+      font-size: 52px;
+    }
+  }
+
+  a {
+    margin-top: auto;
+    padding: 10px;
+    background: var(--color-blue);
+    border-radius: 30px;
+    color: var(--color-white);
+    width: 100%;
+    text-align: center;
+
+    @media (max-width: 450px) {
+      margin-bottom: 90px;
+    }
+  }
+}

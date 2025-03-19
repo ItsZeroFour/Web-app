@@ -1,0 +1,53 @@
+{
+  "sister": "SAUDARI",
+  "reset": "Atur Ulang",
+  "reply": "Balas",
+
+  "firstChatHello": "Deni, hey!",
+  "firstChatMessage1": "Kamu memintaku untuk mencari tahu dari Ibu apa yang dia inginkan untuk ulang tahunnya. Tentu saja, dia bilang tidak ingin apa pun, tapi TV lamanya sudah tidak berfungsi dengan baik lagi…",
+  "firstChatMessage2": "Halo, sayang! Ya, tentu, aku akan segera mengurusnya.",
+  "fitstChatButton": "Pergi ke Stockity",
+
+  "afterChatMessage1": "Hai, aku Andi! Beberapa tahun yang lalu, aku, seperti kamu, tidak tahu apa-apa tentang trading. Tapi sekarang aku sudah mengerti apa yang harus dilakukan di sini dan siap memberi kamu tur!",
+  "afterChatMessage2": "Kita berada di Stockity, platform trading mutakhir yang dirancang untuk memberdayakan para trader dengan alat dan layanan terbaik di pasar keuangan.",
+  "afterChatButton1": "Apa yang harus aku lakukan di sini?",
+
+  "afterChatMessage3": "Kamu harus memprediksi apakah harga suatu aset akan naik atau turun dalam jangka waktu tertentu, dengan pembayaran tetap jika prediksi kamu benar.",
+  "afterChatButton2": "Apakah aku bisa menghasilkan uang di sini?",
+
+  "afterChatMessage4": "Ya! Jumlah trading dimulai dari 16200Rp, jadi kamu tidak akan kehilangan banyak dana saat masih belajar cara trading.",
+  "afterChatButton3": "Bagaimana cara mengisi saldo?",
+
+  "paymentsText": "Kamu bisa mengisi saldo dengan berbagai cara dan tanpa komisi.",
+  "paymentsButton": "Oke, ayo coba!",
+
+  "graphickFirstText": "Kamu harus memprediksi apakah grafik akan naik atau turun.",
+  "graphickFirstButton1": "TURUN",
+  "graphickFirstButton2": "NAIK",
+
+  "adviceText1": "Tidak, kamu salah! Tapi aku punya beberapa saran tentang cara trading.",
+  "adviceButton1": "Apa yang harus aku lakukan?",
+
+  "adviceText2": "Aku menyarankan kamu untuk tidak trading secara asal, tetapi berdasarkan data ekonomi. Stockity memiliki kalender untuk melacak laporan-laporan penting.",
+  "adviceButton2": "Mengerti!",
+
+  "graphick2Text": "Beberapa hari kemudian…",
+
+  "giftReviews": "Baca 77 ulasan",
+  "giftPickUp": "Ambil di kedai",
+  "giftDelivery": "Penghantaran",
+  "giftFrom": "Dari $3.4, esok",
+  "giftButton": "Beli hadiah untuk ibu",
+
+  "mom": "Ibu",
+  "momChatMessage1": "Ibu, selamat ulang tahun! Hadiahku sedang dalam perjalanan ke rumahmu... coba tebak apa itu 📺 😂",
+  "momChatMessage2": "Sayang, terima kasih ❤️❤️❤️ Ini pasti sesuatu yang akan membuat Ayah bisa nonton acara memancing dan pertandingan sepak bola 😂😂😂",
+  "momChatButton": "Ambil hadiahmu",
+
+  "finalText": "Masukkan kode promo TRADINGHERO di bagian deposit dan dapatkan kesempatan memenangkan iPhone 16 PRO baru atau $500 di saldo Anda!",
+  "finalButton": "DAPATKAN KESEMPATAN",
+  "finalStay": "Tetaplah dalam permainan",
+  "finalRules": "Aturan promosi",
+
+  "graphickMainButton": "Pergi ke toko"
+}

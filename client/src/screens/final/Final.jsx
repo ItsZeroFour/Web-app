@@ -1,20 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import style from "./style.module.scss";
 import { Link } from "react-router-dom";
-import arrowImage from "../../assets/icons/arrow.svg";
-import manImg from "../../assets/images/final_man.png";
+import tab from "../../assets/images/Tab.png";
 import { useTranslation } from "react-i18next";
 
 const Final = () => {
   const { t } = useTranslation();
 
   const handleLeadTracking = () => {
-    if (window.fbq !== undefined) {
-      window.fbq("track", "CompleteRegistration");
-    }
-
     if (window.ym) {
-      window.ym(98661745, "reachGoal", "binomial_start");
+      window.ym(100071464, "reachGoal", "Stockity");
     }
   };
 
@@ -23,16 +18,26 @@ const Final = () => {
       <div className="container">
         <div className={`wrapper ${style.final__wrapper}`}>
           <div className={style.final__content}>
-            <h1>{t("finalTitle")}</h1>
+            <h1>Register at Stockity.id</h1>
+            <p>{t("finalText")}</p>
 
-            <img src={manImg} alt="man" />
+            <div className={style.final__img}>
+              <img src={tab} alt="tab" />
+            </div>
 
-            <Link
-              onClick={() => handleLeadTracking()}
-              to="https://binomo.com/auth?a=bfbfde47c861&ac=trading_game&utm_source=trading_game&utm_medium=trading_game&utm_campaign=trading_game#SignUp "
-            >
+            <Link onClick={() => handleLeadTracking()} to="">
               {t("finalButton")}
             </Link>
+
+            <div className={style.final__bottom}>
+              <Link to="/">{t("finalStay")}</Link>
+              <Link
+                to="https://stockity.id/id/ad/tradinghero-rules"
+                target="_blank"
+              >
+                {t("finalRules")}
+              </Link>
+            </div>
           </div>
         </div>
       </div>

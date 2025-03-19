@@ -28,6 +28,8 @@
 }
 
 .after_chat__content {
+  height: 100%;
+
   h1 {
     font-size: 40px;
     font-family: "NunitoSand-eb", sans-serif;
@@ -67,6 +69,7 @@
     z-index: 2;
     transition: all 0.2s ease;
     text-align: center;
+    font-size: 16px;
 
     @media (max-width: 450px) {
       top: 79%;
@@ -162,17 +165,19 @@
 .after_chat__person__first,
 .after_chat__person__third {
   img {
-    width: 310% !important;
+    width: 170% !important;
   }
 }
 
 .after_chat__person__second {
+  height: 100%;
+
   img {
-    width: 250% !important;
+    width: 150% !important;
   }
 
   button {
-    margin-top: 140px !important;
+    margin-top: 65px !important;
   }
 
   .after_chat__message {
@@ -210,10 +215,22 @@
   .after_chat__messages {
     margin-top: 200px;
     width: 100% !important;
+
+    @media (max-width: 450px) {
+      margin-top: 20px;
+    }
   }
 
   button {
-    top: 90%;
+    @media (max-width: 450px) {
+      top: 70%;
+    }
+  }
+}
+
+.after_chat__person__second {
+  .after_chat__messages {
+    margin-top: 100px;
   }
 }
 
@@ -221,12 +238,13 @@
   z-index: 2;
   background: #ececec;
   padding: 10px;
-  margin-top: 30px;
+  margin-top: 20px;
   margin-right: 50px;
   border-radius: 10px;
   width: 230px;
   position: relative;
   margin-left: 40px;
+  font-size: 14px;
 
   &::before {
     content: "";

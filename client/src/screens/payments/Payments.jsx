@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import style from "./style.module.scss";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
-import afterChatPerson5 from "../../assets/images/after-chat-5.png";
+import afterChatPerson5 from "../../assets/images/main_person/1-1.png";
 import popular1 from "../../assets/images/popular/popular-1.png";
 import popular2 from "../../assets/images/popular/popular-2.png";
 import popular3 from "../../assets/images/popular/popular-3.png";
@@ -14,12 +14,13 @@ import popular8 from "../../assets/images/popular/popular-8.png";
 import popular9 from "../../assets/images/popular/popular-9.png";
 
 const Starter = () => {
-  const { i18n } = useTranslation();
-  const navigate = useNavigate();
+  const { t } = useTranslation();
 
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  };
+  useEffect(() => {
+    if (window.ym) {
+      window.ym(100071464, "reachGoal", "top_up");
+    }
+  }, []);
 
   return (
     <section className={style.payments}>
@@ -29,11 +30,8 @@ const Starter = () => {
             <img src={afterChatPerson5} alt="person" />
 
             <div className={style.payments__top__text}>
-              <h4>Mohammed Shami</h4>
-              <p>
-                You can top up your balance in different ways and without
-                commission
-              </p>
+              <h4>Andi Pratama</h4>
+              <p>{t("paymentsText")}</p>
             </div>
           </div>
 
@@ -79,7 +77,7 @@ const Starter = () => {
             </ul>
           </div>
 
-          <Link to="/">OK, let’s try!</Link>
+          <Link to="/graphick-first">{t("paymentsButton")}</Link>
         </div>
       </div>
     </section>

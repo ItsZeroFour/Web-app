@@ -20,7 +20,7 @@ const Starter = () => {
           <Banner />
 
           <h1>STOCKITY TRADING GAME</h1>
-          <p>Complete our interactive storytelling and get a chance to</p>
+          <p>Complete our interactive storytelling and get a chance to win a PRIZE</p>
 
           <img src={manImg} alt="manImg" />
 
@@ -31,7 +31,7 @@ const Starter = () => {
                 navigate("/main");
 
                 if (window.ym) {
-                  window.ym(98661745, "reachGoal", "eng");
+                  window.ym(100071464, "reachGoal", "eng");
                 }
               }}
             >
@@ -39,15 +39,15 @@ const Starter = () => {
             </button>
             <button
               onClick={() => {
-                changeLanguage("hi");
+                changeLanguage("bh");
                 navigate("/main");
 
                 if (window.ym) {
-                  window.ym(98661745, "reachGoal", "hindi");
+                  window.ym(100071464, "reachGoal", "bahasa");
                 }
               }}
             >
-              हिंदी
+              Bahasa
             </button>
           </div>
         </div>

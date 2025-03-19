@@ -5,7 +5,6 @@ import sisterImageAvatar from "../../assets/images/sister_avatar.png";
 import personalImageAvatar from "../../assets/images/personal_avatar.png";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import Banner from "../../components/banner/Banner";
 import BannerSecondary from "../../components/banner_secondary/BannerSecondary";
 
 const FirstChat = () => {
@@ -22,6 +21,9 @@ const FirstChat = () => {
 
     const secondMessageTimer = setTimeout(() => {
       setShowSecondMessage(true);
+      if (window.ym) {
+        window.ym(100071464, "reachGoal", "sister");
+      }
     }, 2000);
 
     const linkTimer = setTimeout(() => {
@@ -93,7 +95,9 @@ const FirstChat = () => {
                   <img src={sisterImageAvatar} alt="sister avatar" />
                 </div>
                 <div className={style.first__chat__message__content}>
-                  <p>{t("sisterMsg1")}</p>
+                  <p>
+                    {t("firstChatHello")} <br /> {t("firstChatMessage1")}
+                  </p>
                 </div>
               </motion.div>
             )}
@@ -107,7 +111,7 @@ const FirstChat = () => {
                 transition={transition}
               >
                 <div className={style.first__chat__message__content}>
-                  <p>{t("sisterMsg2")}</p>
+                  <p>{t("firstChatMessage2")}</p>
                 </div>
                 <div className={style.first__chat__message__avatar}>
                   <img src={personalImageAvatar} alt="personal avatar" />
@@ -124,10 +128,15 @@ const FirstChat = () => {
               transition={{ duration: 0.5 }}
             >
               <Link
+                onClick={async () => {
+                  if (window.ym) {
+                    await window.ym(100071464, "reachGoal", "Andi 1 ");
+                  }
+                }}
                 to="/after-chat"
                 className={`${style.fadeInLink} ${showLink && style.show}`}
               >
-                {t("goToSiteButton")}
+                {t("fitstChatButton")}
               </Link>
             </motion.div>
           )}

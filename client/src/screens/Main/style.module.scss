@@ -21,6 +21,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 400px;
+    padding-top: 40px;
     position: relative;
 
     z-index: 1;
@@ -29,6 +30,7 @@
       font-size: 30px;
       text-align: center;
       text-transform: uppercase;
+      color: #161616;
     }
 
     .main__content__navigation {
@@ -39,6 +41,10 @@
       .main__button__down,
       .main__button__up {
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         .main__button__down__icon,
         .main__button__up__icon {
@@ -122,6 +128,8 @@
         }
       }
 
+      margin-bottom: -40px;
+
       @media (max-width: 380px) {
         width: 160px;
       }
@@ -143,7 +151,7 @@
   .main__hand__image {
     position: absolute;
     // left: 13%;
-    top: 60px;
+    top: 120px;
 
     img {
       @media (max-width: 450px) {

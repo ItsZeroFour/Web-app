@@ -1,0 +1,276 @@
+.advice__wrapper {
+  background: var(--color-white);
+  color: #161616;
+
+  border-radius: 10px;
+  padding-bottom: 10px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transform-style: preserve-3d;
+
+  gap: 10px;
+  padding: 20px;
+
+  @media (max-width: 450px) {
+    border: none;
+    border-radius: 0;
+    overflow-y: auto;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 550px;
+    height: 550px;
+    background: var(--color-blue);
+    border-radius: 50%;
+    transform: translateX(-1px);
+    top: -30%;
+  }
+}
+
+.advice_main__wrapper {
+  background: var(--color-white);
+  color: #161616;
+
+  border-radius: 10px;
+  padding-bottom: 10px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 10px;
+  padding: 20px;
+
+  @media (max-width: 450px) {
+    border: none;
+    border-radius: 0;
+    overflow-y: auto;
+  }
+}
+
+.after_chat__person__third {
+  img {
+    width: 190% !important;
+  }
+}
+
+.after_chat__person__third {
+  .after_chat__messages {
+    margin-top: 200px;
+    width: 120% !important;
+    z-index: 1;
+  }
+
+  button {
+    top: 80%;
+    font-size: 18px;
+  }
+}
+
+.advice_main__item__top__text {
+  p {
+    &:last-child {
+      font-size: 12px;
+    }
+  }
+}
+
+.after_chat__person__third {
+  .after_chat__message {
+    width: 60%;
+    margin-top: 0px;
+    margin-left: 80px;
+
+    &::before {
+      border-width: 0 20px 20px 20px;
+      right: -4%;
+    }
+  }
+
+  button {
+    margin-top: 100px !important;
+
+    @media (max-width: 450px) {
+      margin-top: 30px !important;
+    }
+  }
+}
+
+.after_chat__message {
+  z-index: 2;
+  background: #ececec;
+  padding: 10px;
+  margin-top: 30px;
+  margin-right: 0px;
+  border-radius: 10px;
+  width: 260px;
+  position: relative;
+  margin-left: 40px;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: 0%;
+    right: -10.5px;
+
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 20px 20px 20px;
+    border-color: transparent transparent #ececec transparent;
+    transform: rotate(270deg);
+  }
+
+  p {
+    width: 100%;
+    margin-top: 0;
+    text-align: left;
+  }
+}
+
+.after_chat__person {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 85%;
+  width: 100%;
+
+  img {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+  }
+
+  button,
+  a {
+    position: absolute;
+    padding: 15px;
+    background: var(--color-blue);
+    color: var(--color-white);
+    width: 90%;
+    border-radius: 40px;
+    z-index: 2;
+    transition: all 0.2s ease;
+    text-align: center;
+
+    @media (max-width: 450px) {
+      top: 75%;
+    }
+  }
+}
+
+.advice_main__top {
+  display: flex;
+  background: #f3f3f3;
+  color: #161616;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    width: 160px !important;
+    height: auto;
+    top: 5%;
+    left: -5%;
+    object-fit: contain;
+    position: absolute;
+  }
+
+  .advice_main__top__text {
+    margin-left: 135px;
+    padding: 10px;
+
+    p {
+      text-align: left;
+      margin-top: 5px;
+      font-size: 14px;
+
+      @media (max-width: 450px) {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.advice_main__wrapper {
+  & > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+
+    & > li {
+      padding: 10px;
+      border-radius: 10px;
+      background: #f3f3f3;
+      width: 100%;
+
+      .advice_main__item__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        gap: 10px;
+        padding: 10px;
+
+        .advice_main__item__top__important {
+          padding: 5px;
+          background: var(--color-blue);
+          border-radius: 10px;
+          color: var(--color-white);
+          margin-top: 5px;
+          font-size: 14px;
+        }
+      }
+
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-left: 15px;
+      }
+
+      @media (max-width: 710px) {
+        padding: 5px;
+      }
+    }
+
+    @media (max-height: 710px) {
+      gap: 10px;
+      margin-top: 5px;
+    }
+  }
+}
+
+.advice_main__wrapper {
+  a {
+    margin-top: auto;
+    width: 100%;
+    background: var(--color-blue);
+    border-radius: 30px;
+    padding: 10px;
+    color: var(--color-white);
+    text-align: center;
+    font-size: 16px;
+
+    @media (max-width: 450px) {
+      margin-bottom: 90px;
+    }
+  }
+}
